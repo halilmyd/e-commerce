@@ -1,4 +1,4 @@
-// Soru 1
+// Soru 1ytgggh
 // Verilen sayının tek mi çift mi olduğunun söyleyen bir fonksiyon yazınız.
 
 
