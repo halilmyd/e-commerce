@@ -4,17 +4,19 @@ import { Link } from "react-router-dom";
 
 function Nav() {
 
+    const cıkısYap = () => {
+        localStorage.setItem("isLogin", "false")
+        window.location.href = "/login"
+    }
+
     return (
         <div className="Nav">
             <nav>
                 <ul className="nav-Links">
                     <Link to="/">
-                    <h1><li className="hknd">Ürün Listesi</li></h1>    
+                        <h2><li className="hknd">Anasayfa</li></h2>
                     </Link>
-                    <Link to="/favoriler">
-                      <h1><li className="ilts">Favoriler</li></h1> 
-                    </Link>
-                </ul>
+                </ul>  
             </nav>
         </div>
     )
