@@ -1,3 +1,107 @@
-.App {
+.App{
   text-align: center;
+}
+nav{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh ;
+  background: rgb(255, 255, 255);
+  color: white;
+}
+
+.nav-Links{
+ 
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ list-style: none;
+}
+.ınput{
+ width: 500px;
+ height: 40px;
+ 
+}
+.search-input{
+
+  text-align: center;
+}
+
+.logo{
+  max-height: 80px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  color: rgb(0, 0, 0);
+}
+
+.home-page{
+  list-style-type: none;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+.description{
+  display: flex;
+  background-color: rgb(172, 172, 172);
+  font-size: medium;
+  justify-content: space-around;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.header-categories{
+  background-color: whitesmoke;
+}
+
+.categories{
+  
+  background-color: rgb(172, 172, 172);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.categories ul{
+  
+  display: contents;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  position: relative;
+  float: left;
+  width: 100px;
+  
+ 
+}
+
+.categories ul li ul {
+  display: none;
+}
+
+.categories ul li:hover ul {
+  
+  display: block
+}
+
+.categories li a{
+  display: block;
+  text-decoration: none;
+  background-color: rgb(172, 172, 172);
+  font-size: 15px;
+  text-align: center;
+}
+
+.categories li a:hover  {
+  transition: .3s ease-in-out;
 }
