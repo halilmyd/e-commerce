@@ -22,7 +22,6 @@ nav{
 .ınput{
  width: 500px;
  height: 40px;
- 
 }
 .search-input{
 
@@ -86,6 +85,7 @@ nav {
 }
 
 .categories ul li ul {
+  text-decoration: none;
   display: none;
 }
 
@@ -104,4 +104,8 @@ nav {
 
 .categories li a:hover  {
   transition: .3s ease-in-out;
+  
+}
+.product-list{
+  background-color: rgb(255, 255, 255);
 }

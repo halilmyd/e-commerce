@@ -11,38 +11,49 @@ function Nav() {
 
     return (
         <div className="Nav">
-             <ul className="description">       
-                 <li>Temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</li>            
-                 <li><a href="#">İletişim</a></li> 
-                 <li><a href="#">Kampanyalar</a></li>
-                             
-             </ul>
+            <ul className="description">
+                <li>Temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</li>
+                <li><a href="#">İletişim</a></li>
+                <li><a href="#">Kampanyalar</a></li>
+            </ul>
             <nav>
-                <ul className="nav-Links">      
+                <ul className="nav-Links">
                     <Link to="/">
                         <h2 className="home-page"><img className="logo" src="https://imgyukle.com/f/2021/11/05/kOZKhA.jpg" /></h2>
                     </Link>
-                    <div className="ui search">
-                        <div className="ui icon input">
-                            <input className="ınput" type="text" placeholder="Ürün arayın.." />
-                            <i className="search icon"></i>
-                        </div>
-                        <div className="results"></div>
+                    <div className="ui icon input">
+                        <input className="ınput" type="text" placeholder="Ürün arayın..." />
+                        <i className="inverted circular search link icon"></i>
                     </div>
                     <div>
-                        <div class="ui labeled button" tabindex="0">
-                            <div class="ui red button">
-                                <i class="heart icon"></i>Favoriler
+                        <Link to="/sepetim">
+                            <div className="ui vertical animated button" tabindex="0">
+                                <div className="hidden content">Sepetim</div>
+                                <div className="visible content">
+                                    <i className="shop icon"></i>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to="/favoriler">
+                            <div className="ui vertical animated button" tabindex="0">
+                            <div className ="hidden content">Favoriler</div>
+                            <div className ="visible content">
+                            <i className="heart icon"></i>
+                            </div>
+                            </div>
+                        </Link>
+                        <div className="ui animated button" tabindex="0" onClick={() => cıkısYap()}>
+                            <div className="visible content" >Çıkış</div>
+                            <div className="hidden content">
+                                <i className="right arrow icon" ></i>
                             </div>
                         </div>
-                        <button className="ui right labeled icon button" onClick={() => cıkısYap()}>
-                            <i className="right arrow icon"></i>Çıkıs</button>
                     </div>
                 </ul>
 
 
             </nav>
-        </div>
+        </div >
     )
 }
 export default Nav;

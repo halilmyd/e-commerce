@@ -1,0 +1,120 @@
+.container-card{
+  background: rgb(255, 255, 255);
+    position: relative;
+    max-width: 249px;
+    min-width: 249px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.container-card .card-card {
+  
+max-height: 420px;
+min-height: 420px;
+  background: rgb(255, 255, 255);
+}
+.container-card .card-card .imgBx{
+  
+  overflow: hidden;
+  position: relative;
+  max-height: 60%;
+  min-height: 60%;
+}
+.container-card .card-card .imgBx img {
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+ 
+}
+
+.discount-card{
+  position: absolute;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: 0;
+  left:0;
+}
+
+.action-card{
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+.action-card li{
+  position: relative;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background: rgb(3, 78, 216);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: translateX(60px);
+  
+
+}
+.action-card li:nth-child(2){
+transition-delay: 0.15s;
+}
+.action-card li:nth-child(3){
+  transition-delay: 0.3s;
+  }
+
+.container-card .card-card:hover .action-card li{
+  transform: translateX(0px);
+}
+
+.action-card li:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 40px;
+}
+
+.container-card .card-card .content-card{
+  padding: 10px;
+}
+.container-card .card-card .content-card .productName-card h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin: 5px 0;
+}
+.container-card .card-card .content-card .price_rating-card{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.price_rating-card h2{
+  font-size: 20px;
+  color: rgb(3, 78, 216);
+  font-weight: 500px;
+}
+.price_rating-card p{
+  color: rgb(95, 95, 95);
+}
+.container-card .card-card .content-card .rating-card a {
+  color: #ffd513;
+  cursor: pointer;
+}
+.container-card .card-card .content-card .rating-card .fa.grey{
+  color: #ccc;
+}
+.Cards{
+  display: inline-block;
+  justify-content: center;
+}
+
