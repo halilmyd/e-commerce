@@ -7842,6 +7842,7 @@ const HomePage = () => {
         console.log(favories)
         favories.push(id)
         localStorage.setItem("favoriler", JSON.stringify(favories))
+        
     }
     const removeInFavories = (id) => {
         console.log(id)
@@ -7865,6 +7866,7 @@ const notify = () =>{
 return (
     <div className="HomePage">
         <div>
+            
             <Categories />
             <>         
                 <SliderBanner /><br/>

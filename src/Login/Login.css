@@ -5,7 +5,7 @@
 }
 
 .Login{
-	background: rgb(129, 136, 133);
+	background: rgb(255, 255, 255);
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -15,7 +15,7 @@
 	
 }
 .loginss h1{
-	color: rgb(48, 48, 48);
+	color: rgb(0, 0, 0);
 }
 h1 {
 	font-weight: bold;
@@ -48,7 +48,7 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid #000000;
-	background-color: #474747;
+	background-color: #000000;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -72,7 +72,7 @@ button.ghost {
 }
 
 .loginss {
-	background-color: #adadad;
+	background-color: #ff9600;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -169,6 +169,7 @@ input {
 
 .overlay-panel {
 	position: absolute;
+	background: black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -290,4 +291,13 @@ input {
 	opacity:0.3;
 	font-size:13px;
 	margin-bottom:0;
+  }
+  .overlay-right h1{
+	color: #ff9600;
+  }
+  .overlay-right h2{
+	color: #ff9600;
+  }
+  .overlay-right p{
+	color: #ff9600;
   }

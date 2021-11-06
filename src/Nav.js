@@ -19,7 +19,7 @@ function Nav() {
             <nav>
                 <ul className="nav-Links">
                     <Link to="/">
-                        <h2 className="home-page"><img className="logo" src="https://imgyukle.com/f/2021/11/05/kOZKhA.jpg" /></h2>
+                        <h2 className="home-page"><img className="logo" src="https://i.hizliresim.com/lu1fmra.png" /></h2>
                     </Link>
                     <div className="ui icon input">
                         <input className="ınput" type="text" placeholder="Ürün arayın..." />
