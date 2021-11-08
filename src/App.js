@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import HomePage from './Components/HomePage';
 import Nav from './Nav';
+import Profile from './Components/Profile';
 import Favories from './Components/Favories';
 import Basket from './Components/Basket';
 import Login from './Login/Login';
 import './App.css';
+import Search from './Components/Search';
 
 
 
@@ -32,6 +34,8 @@ function App() {
             <Route path="/" exact component={HomePage} />
             <Route path="/favoriler" component={Favories} />
             <Route path="/sepetim" component={Basket} />
+            <Route path="/profil" component={Profile} />
+            <Route path="/search/:keyword" component={Search} />
           </Switch>
         </div>
       </Router>

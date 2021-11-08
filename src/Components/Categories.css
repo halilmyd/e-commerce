@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap');
+
+body{
+    font-family: Open Sans, sans-serif;
+}
+.Categories .menu {
+    height: 40px;
+    background-color: #275CE6;
+}
+.Categories .menu  li a img{
+    width: 12px;
+}
+
+.Categories ul {
+    list-style-type: none;
+    
+}
+.Categories .menu ul ul li a{
+    color: rgb(255, 255, 255);
+}
+.Categories .menu ul .baslık{
+    display: inline-block;
+    display: none;
+}
+.Categories .menu ul .baslık:hover {
+    display: inline-block;
+}
+.Categories .menu ul li a {
+    color: rgb(255, 255, 255);
+}
+ .Categories .menu a {
+     padding-left: 6%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+

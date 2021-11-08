@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Card from './Card'
 import Footer from './Footer'
+import { toast } from "react-toastify";
 
-
-
+toast.configure()
 const Favories = () => {
 
     const [productList] = useState([
@@ -7859,11 +7859,22 @@ const Favories = () => {
         console.log(favoriteProducts)
         setPruducts(favoriteProducts)
       }
-
+      const notifyRemove = () => {
+        toast.success("Favorilerden Kaldırıldı", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
 
     return (
         <div className="Favories">
-            <h3>Favoriye Eklenen Ürünler</h3>
+            <div className="container">
+            <h3 className="baslk">Favoriye Eklenen Ürünler</h3>
             <b>Ürün Sayısı:{products.length}</b>
             <br/><br/>
             {
@@ -7877,12 +7888,14 @@ const Favories = () => {
                                 productImage={fvr.images}
                                 addToFavories={(id) => console.log(id)}
                                 removeInFavories={(id) => removeInFavories(id)}
+                                notifyRemove={notifyRemove}
                                 id={fvr.id}
                             />
                         </div>
                     )
                 })
             }
+            </div>
             <Footer />
         </div>
     )

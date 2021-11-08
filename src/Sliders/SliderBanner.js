@@ -13,7 +13,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 
  const SliderBanner = () => {
     return (
-        <div>
+        <div className="">
             <>
                 <Swiper spaceBetween={30}
                     centeredSlides={true}
@@ -22,7 +22,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
                         "disableOnInteraction": false
                     }} pagination={{
                         "clickable": true
-                    }} navigation={true} className="mySwiper swiper-space">
+                    }} navigation={true} className="mySwiper swiper-space disable-bullet">
                     <SwiperSlide><img src="https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiN2NiMjQ3YmYtODgyZS00OWM2LTg1YjgtM2IxNmRmZDU2YTI2Iiwid2lkdGgiOjIzMjAsImhlaWdodCI6NTAwLCJmaXQiOiJvdXRzaWRlIiwiY29udGVudFR5cGUiOiJpbWFnZS93ZWJwIiwicXVhbGl0eSI6MzB9&platform=WEB&" /></SwiperSlide>
                     <SwiperSlide><img src="https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMWNmNjc0YmMtMDY5Yy00YWI0LTljZDMtY2E1MDMzYTY5YWZkIiwid2lkdGgiOjIzMjAsImhlaWdodCI6NTAwLCJmaXQiOiJvdXRzaWRlIiwiY29udGVudFR5cGUiOiJpbWFnZS93ZWJwIiwicXVhbGl0eSI6MzB9&platform=WEB&" /></SwiperSlide>
                     <SwiperSlide><img src="https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMzE3Y2Q1ZDItMGFjMC00NzIwLWJmYmYtMmE5ODFkODkxZjUzIiwid2lkdGgiOjIzMjAsImhlaWdodCI6NTAwLCJmaXQiOiJvdXRzaWRlIiwiY29udGVudFR5cGUiOiJpbWFnZS93ZWJwIiwicXVhbGl0eSI6MzB9&platform=WEB&" /></SwiperSlide>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../Components/Card.css';
 
-const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addToFavories, removeInFavories, notify, productImage }) => {
+const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addToFavories, removeInFavories, notifySucces, productImage,notifyRemove }) => {
   return (
     <div className="globacard">
       <div className="Card">
@@ -14,8 +14,9 @@ const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addTo
                 <li className="discount-card">-{discount}%</li>
               </ul>
               <ul className="action-card">
-                <li onClick={notify}><i className="heart icon" onClick={() => addToFavories(id)} ></i></li>
-                <li><i class="heart outline icon" onClick={() => removeInFavories(id)}></i></li>
+                <li onClick={() => addToFavories(id)}><i className="heart icon" onClick={notifySucces}  ></i></li>
+                <li onClick={() => removeInFavories(id)}><i className="heart outline icon" onClick={notifyRemove}></i></li>
+                <li ><i className="cart arrow down icon"></i></li>
               </ul>
             </div>
             <div className="content-card">

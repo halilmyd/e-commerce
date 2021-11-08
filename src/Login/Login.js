@@ -31,7 +31,7 @@ const Login = () => {
                     <div className="overlay-containers">
                         <div className="overlay">
                             <div className="overlay-panel overlay-right">
-                                <h2>MYD E-Store</h2> <br /><br />
+                                <h2>Unishop Türkiye</h2> <br /><br />
                                 <h1>Hoşgeldiniz..</h1>
                                 <p>Kişisel bilgilerinizi girin ve bizimle keyifli bir alışveriş yolculuğuna başlayın!</p>
                             </div>
@@ -54,13 +54,13 @@ const Login = () => {
                     <div className="col-sm-6 col-md-3 item">
                         <h3>Hakkında</h3>
                         <ul>
-                            <li><a href="#">MYD E-Store</a></li>
+                            <li><a href="#">Unishop Türkiye</a></li>
                             <li><a href="#">Takım</a></li>
                             <li><a href="#">Kariyer</a></li>
                         </ul>
                     </div>
                     <div className="col-md-6 item text">
-                        <h3>MYD E-Store</h3>
+                        <h3>Unishop Türkiye</h3>
                         <p>Bir bitirme projesi olarak kabul edilip. Eğitim süresi boyunca öğrenilen bilgilerin bir araya getirilmesiyle ortaya çıkarılan en iyi sonuçtur.</p>
                     </div>
                 </div>

@@ -1,21 +1,4 @@
-#app {
-    height: 100%;
-  }
-  html,
-  body {
-    position: relative;
-    height: 100%;
-  }
-  
-  body {
-    background: rgb(255, 255, 255);
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-  }
-  
+
   .Biuty-Slider .swiper {
     width: 100%;
     height: 100%;
@@ -51,3 +34,6 @@
     max-width: 70%;
     min-width: 70%;
   }
+.Biuty-Slider h3 {
+  text-align: center;
+}

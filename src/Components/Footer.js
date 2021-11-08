@@ -18,7 +18,7 @@ import './Footer.css'
                     <li className="list-inline-item"><a href="#">Şartlar</a></li>
                     <li className="list-inline-item"><a href="#">Gizlilik Politikası</a></li>
                 </ul>
-                <p className="copyright">MYD E-Store © 2021</p>
+                <p className="copyright">Unishop Türkiye © 2021</p>
             </footer>
         </div>
     )

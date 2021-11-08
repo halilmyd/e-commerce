@@ -3456,7 +3456,7 @@ const HomePage = () => {
         {
             "id": "20292365",
             "variantGroupId": "20292365",
-            "images":   "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4399,7 +4399,7 @@ const HomePage = () => {
         {
             "id": "67793860",
             "variantGroupId": "67793860",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4555,7 +4555,7 @@ const HomePage = () => {
         {
             "id": "20085798",
             "variantGroupId": "20085798",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -6275,7 +6275,7 @@ const HomePage = () => {
         {
             "id": "1909367",
             "variantGroupId": "1909367",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -7836,13 +7836,13 @@ const HomePage = () => {
 
     )
     const addToFavories = (id) => {
-        
+
         console.log(id)
         const favories = (JSON.parse(localStorage.getItem("favoriler")))
         console.log(favories)
         favories.push(id)
         localStorage.setItem("favoriler", JSON.stringify(favories))
-        
+
     }
     const removeInFavories = (id) => {
         console.log(id)
@@ -7851,59 +7851,64 @@ const HomePage = () => {
         favories.splice(index, 1)
         localStorage.setItem("favoriler", JSON.stringify(favories))
     }
-const notify = () =>{
-    toast.success('Favorilere Eklendi', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+    const notifySucces = () => {
+        toast.success(" Favorilere Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
         });
-}
+    }
+    return (
+        <div className="HomePage">
+            <div>
+                <Categories />
+                <SliderBanner /><br />
+                <div className="container">
+                    <SliderLogo /><br /><b /><br />
+                    <Snacks /><br /><br /><br />
+                    <BiutySlider /><br /><br /><br />
+                </div>
+                <div className="product-list">
+                    <h1>KEŞFET</h1>
+                    <p>Avantajlı fiyatlarla alışverişe hemen başlayın!</p>
+                    <br />
+                    {
+                        productlist.map((product) => {
+                            return (
 
-return (
-    <div className="HomePage">
-        <div>
-            
-            <Categories />
-            <>         
-                <SliderBanner /><br/>
-                <SliderLogo /><br/><b/><br/>
-                <Snacks /><br/><br/><br/>
-                <BiutySlider/><br/><br/><br/>
-            </>
-            <div className="product-list">
-                <h1>KEŞFET</h1>
-                <p>Avantajlı fiyatlarla alışverişe hemen başlayın!</p>
-                <br />
-                {
-                    productlist.map((product) => {
-                        return (
+                                <div className="Cards">
+                                    <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                        priceWithOutDiscount={product.priceTag.priceLabel}
+                                        discountedPrice={product.priceTag.discountedPriceLabel}
+                                        discount={product.priceTag.discountRateLabel}
+                                        productImage={product.images}
+                                        addToFavories={(id) => addToFavories(id)}
+                                        removeInFavories={(id) => removeInFavories(id)}
+                                        id={product.id}
+                                        notifySucces={notifySucces}
 
-                            <div className="Cards">
-                                <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
-                                    priceWithOutDiscount={product.priceTag.priceLabel}
-                                    discountedPrice={product.priceTag.discountedPriceLabel}
-                                    discount={product.priceTag.discountRateLabel}
-                                    productImage={product.images}
-                                    addToFavories={(id) => addToFavories(id)}
-                                    removeInFavories={(id) => removeInFavories(id)}
-                                    id={product.id}
-                                    notify={notify}
-                                />
-                            </div>
-                        )
-                    })
-                }
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
+            <div className="myd-store">
+                <h3>Unishop Türkiye</h3>
+                <p>Unishop Türkiye güvencesiyle ve aynı gün teslimat seçenekleriyle temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</p>
+            </div>
+            <br />
+            <br />
+            <br />
+            <Footer />
+
         </div>
-        <h3>MYD E-STORE</h3>
-        <p>MYD E-Store güvencesiyle ve aynı gün teslimat seçenekleriyle temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</p>
-        <Footer/>
-    </div>
-  )
+    )
 }
 
 export default HomePage;

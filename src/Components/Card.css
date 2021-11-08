@@ -61,7 +61,7 @@ min-height: 420px;
   height: 40px;
   color: white;
   background: rgb(3, 78, 216);
-  border-radius: 40px;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +84,9 @@ transition-delay: 0.15s;
 }
 
 .action-card li:hover {
-  background: rgb(255, 255, 255);
+  background: rgb(255, 150, 0);
   color: rgb(0, 0, 0);
-  border-radius: 40px;
+ 
 }
 
 .container-card .card-card .content-card{
@@ -97,6 +97,7 @@ transition-delay: 0.15s;
   font-weight: 500;
   color: rgb(0, 0, 0);
   margin: 5px 0;
+  cursor: pointer;
 }
 .container-card .card-card .content-card .price_rating-card{
   display: flex;
@@ -107,17 +108,14 @@ transition-delay: 0.15s;
   font-size: 20px;
   color: rgb(3, 78, 216);
   font-weight: 500px;
+  cursor: pointer;
 }
 .price_rating-card p{
   color: rgb(95, 95, 95);
-}
-.container-card .card-card .content-card .rating-card a {
-  color: #ffd513;
   cursor: pointer;
 }
-.container-card .card-card .content-card .rating-card .fa.grey{
-  color: #ccc;
-}
+
+
 .Cards{
   display: inline-block;
   justify-content: center;

@@ -7849,7 +7849,7 @@ const Snacks = () => {
         favories.splice(index, 1)
         localStorage.setItem("favoriler", JSON.stringify(favories))
     }
-    const notify = () =>{
+    const notifySucces = () =>{
         toast.success('Favorilere Eklendi', {
             position: "top-center",
             autoClose: 1000,
@@ -7863,6 +7863,7 @@ const Snacks = () => {
 
     return (
         <div className="Snacks">
+            
             <h3><b>ATIŞTIRMALIKLAR</b></h3><br/><br/>
             <>
                 <Swiper spaceBetween={30}
@@ -7894,7 +7895,7 @@ const Snacks = () => {
                                             addToFavories={(id) => addToFavories(id)}
                                             removeInFavories={(id) => removeInFavories(id)}
                                             id={product.id}
-                                            notify={notify}
+                                            notifySucces={notifySucces}
                                         />
                                     </SwiperSlide>
                                 )
@@ -7905,7 +7906,8 @@ const Snacks = () => {
 
                 </Swiper>
             </>
-        </div>
+            </div>
+        
     )
 }
 export default Snacks;
