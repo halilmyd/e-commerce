@@ -7862,6 +7862,25 @@ const HomePage = () => {
             progress: undefined,
         });
     }
+    const basketNotifySucces = () => {
+        toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const addBasket = (id) => {
+        console.log(id)
+        const favoriler = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(favoriler)
+        favoriler.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(favoriler))
+    
+      }
     return (
         <div className="HomePage">
             <div>
@@ -7888,7 +7907,9 @@ const HomePage = () => {
                                         productImage={product.images}
                                         addToFavories={(id) => addToFavories(id)}
                                         removeInFavories={(id) => removeInFavories(id)}
+                                        addBasket={(id) => addBasket(id)}
                                         id={product.id}
+                                        basketNotifySucces={basketNotifySucces}
                                         notifySucces={notifySucces}
 
                                     />

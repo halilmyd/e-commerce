@@ -8,7 +8,7 @@ const cıkısYap = () => {
 
 const Profile = () => {
     return (
-        <div className="Profile">
+        <div className="Profile container">
             <div class="container rounded bg-white mt-5 mb-5">
                 <div>
                     <div class="row">

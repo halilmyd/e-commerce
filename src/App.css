@@ -81,8 +81,13 @@ nav {
   text-align: center;
 }
 .Profile{
-  text-align: left;
+  padding-left: 13%;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets {
   display: none;
+}
+.basket-header {
+  color: white;
+  background-color: #404fa2;
+  height: 40px;
 }
