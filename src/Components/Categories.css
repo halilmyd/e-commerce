@@ -3,37 +3,90 @@
 body{
     font-family: Open Sans, sans-serif;
 }
-.Categories .menu {
-    height: 40px;
+/* .Categories  {
     background-color: #275CE6;
-}
-.Categories .menu  li a img{
-    width: 12px;
-}
+} */
 
-.Categories ul {
+.Categories {
+    background-color: #275CE6;
     list-style-type: none;
+}
+.Categories  ul li a img{
+    width: 25px;
+}
+ 
+.menuAlan li {
+    display: inline-block;
     
 }
-.Categories .menu ul ul li a{
-    color: rgb(255, 255, 255);
-}
-.Categories .menu ul .baslık{
-    display: inline-block;
-    display: none;
-}
-.Categories .menu ul .baslık:hover {
-    display: inline-block;
-}
-.Categories .menu ul li a {
-    color: rgb(255, 255, 255);
-}
- .Categories .menu a {
-     padding-left: 6%;
+.menuAlan >li >a {
+    color: white;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding-left:10px ;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.menuAlan >li >a:hover{
+    background-color: #003fb6;
+}
+.menuAlan >li ul li {
+    display: inline-block;
+}
+.menuAlan >li >ul >li >a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 40px;
+    
+
+}
+.menuAlan >li >ul >li >a:hover{
+    color:blue;
+    
+}
+.menuAlan >li >ul{
+    opacity: 0;
+    background: rgb(238, 238, 238);
+    position: absolute;
+    height: 75%;
+ transition: 250ms all;
+ visibility: hidden;
+   
+    
+    
+}
+.menuAlan  >li:hover >ul {
+    opacity: 1;
+    visibility: visible;
+    padding-top: 20px;
+    display: flex   ;
+    z-index: 9999;
+    position: absolute;
+    width: 80%;
+    flex-wrap: wrap;
 }
 
+.menuAlan >li >ul >li >ul >li{
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
 
+    
+}
+.menuAlan >li >ul >li >ul >li >a {
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    align-items: center;
+
+}
+.menuAlan >li >ul >li >ul >li >a:hover {
+    color: blue;
+}
 
 

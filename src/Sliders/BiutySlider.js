@@ -7850,6 +7850,25 @@ const BiutySlider = () => {
         favories.splice(index, 1)
         localStorage.setItem("favoriler", JSON.stringify(favories))
     }
+    const addBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        basket.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
+    
+      }
+      const basketNotifySucces = () => {
+        toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
     const notifySucces = () =>{
         toast.success('Favorilere Eklendi', {
             position: "top-center",
@@ -7894,8 +7913,11 @@ const BiutySlider = () => {
                                             productImage={product.images}
                                             addToFavories={(id) => addToFavories(id)}
                                             removeInFavories={(id) => removeInFavories(id)}
+                                            addBasket={(id) => addBasket(id)}
+                                            removeInBasket={(id)=> console.log(id)}
                                             id={product.id}
                                             notifySucces={notifySucces}
+                                            basketNotifySucces={basketNotifySucces}
                                         />
                                     </SwiperSlide>
                                 )

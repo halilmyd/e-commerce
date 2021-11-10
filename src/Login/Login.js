@@ -14,7 +14,11 @@ const Login = () => {
             alert("Kullanıcı Adı Veya Şifreyi Yanlış Yazdınız")
         }
     }
-
+    const onKeyUp =(event)=> {
+        if(event.charCode === 13){
+            loginId()
+        }
+    }
 
     return (
         <div>
@@ -23,8 +27,8 @@ const Login = () => {
                     <div className="form-containers sign-in-containers">
                         <div className="loginss">
                             <h1>Giriş Yap</h1>
-                            <input type="email" placeholder="Kullanıcı adı" onChange={(e) => setUsername(e.target.value)} />
-                            <input type="password" placeholder="Parola" onChange={(e) => setPassword(e.target.value)} />
+                            <input type="email" placeholder="Kullanıcı adı" onChange={(e) => setUsername(e.target.value)} onKeyPress={onKeyUp}/>
+                            <input type="password" placeholder="Parola" onChange={(e) => setPassword(e.target.value)} onKeyPress={onKeyUp}/>
                             <button onClick={() => loginId()} >Giriş Yap</button>
                         </div>
                     </div>

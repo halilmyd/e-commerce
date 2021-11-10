@@ -7875,23 +7875,29 @@ const HomePage = () => {
     }
     const addBasket = (id) => {
         console.log(id)
-        const favoriler = (JSON.parse(localStorage.getItem("sepetim")))
-        console.log(favoriler)
-        favoriler.push(id)
-        localStorage.setItem("sepetim", JSON.stringify(favoriler))
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        basket.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
     
       }
+      const removeInBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        const index = basket.findIndex(p => p === id)
+        basket.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(basket))
+    }
     return (
         <div className="HomePage">
-            <div>
-                <Categories />
-                <SliderBanner /><br />
+            <Categories /> 
                 <div className="container">
+                <SliderBanner /><br />
                     <SliderLogo /><br /><b /><br />
                     <Snacks /><br /><br /><br />
                     <BiutySlider /><br /><br /><br />
                 </div>
-                <div className="product-list">
+                <div className="product-list container">
                     <h1>KEŞFET</h1>
                     <p>Avantajlı fiyatlarla alışverişe hemen başlayın!</p>
                     <br />
@@ -7908,6 +7914,7 @@ const HomePage = () => {
                                         addToFavories={(id) => addToFavories(id)}
                                         removeInFavories={(id) => removeInFavories(id)}
                                         addBasket={(id) => addBasket(id)}
+                                        removeInBasket={(id) => removeInBasket(id)}
                                         id={product.id}
                                         basketNotifySucces={basketNotifySucces}
                                         notifySucces={notifySucces}
@@ -7918,7 +7925,7 @@ const HomePage = () => {
                         })
                     }
                 </div>
-            </div>
+            
             <div className="myd-store">
                 <h3>Unishop Türkiye</h3>
                 <p>Unishop Türkiye güvencesiyle ve aynı gün teslimat seçenekleriyle temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</p>

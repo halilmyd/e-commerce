@@ -1,4 +1,6 @@
-
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 nav{
   
   display: flex;
@@ -10,8 +12,7 @@ nav{
 }
 
 .nav-Links{
-  padding-left: 100px;
-  padding-right: 100px;
+  
  background: #ffffff;
  width: 100%;
  display: flex;
@@ -50,14 +51,19 @@ nav {
 
 .description{
   display: flex;
-  background:rgb(201, 201, 201);
+  background:whitesmoke;
   font-size: small;
   justify-content: space-around;
   padding: 5px;
   list-style-type: none;
+  
 }
 .description a {
   color: black;
+  text-decoration: none;
+}
+.description a:hover{
+  color: rgb(143, 143, 143);
 }
 .baslk{
   height: 40px;
@@ -90,4 +96,19 @@ nav {
   color: white;
   background-color: #404fa2;
   height: 40px;
+}
+.card-body{
+  background:  #404fa2;
+}
+.card-title{
+  color: white;
+}
+.card-text{
+  color: white;
+}
+.btn-primary{
+  color: black;
+  background-color: #b7b7b7;
+  border-color: 007bff;
+
 }

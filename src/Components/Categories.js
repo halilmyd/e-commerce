@@ -4,6 +4,9 @@ import './Categories.css'
 
 const Categories = () => {
 
+
+          
+
     const [categories, setCategories] = useState([
         {
             "id": "EVBAKIM-JT4GV",
@@ -1207,28 +1210,41 @@ const Categories = () => {
         }
     ])
     return (
-        <div className="Categories ">
-            <ul className="menu">
+        <div className="Categories  ">
+            <ul className="menuAlan container">
                 <li>
-                    <a href="#"><img className="menu-icon" src="https://imgyukle.com/f/2021/11/07/kXFyvj.png" />Kategoriler<img className="down-icon" src="https://imgyukle.com/f/2021/11/07/kXbpW1.png" /></a>
+                    <a href="">
+                        <img className="menu-icon" src="https://imgyukle.com/f/2021/11/10/khV0oe.png" />
+                        Kategoriler
+                        <img className="down-icon" src="https://imgyukle.com/f/2021/11/10/khnk5Y.png" />
+                    </a>
                     <ul>
-                        {categories.map((categori) => {
-                            return (
-                                <li className="baslık"><a href="#">{categori.name}</a>
-                                <ul>
-                                {categori.subCategories.map(subCategori=>{
-                                        return (
-                                        <li><a href="#">{subCategori.name}</a></li>
-                                        )
-                                    })}
-                                    
-                                </ul>
+                        {
+                            categories.map(categori => {
+                                return (
+                                    <li><a href="">{categori.name}</a>
+                                        <ul>
+                                            {categori.subCategories.map(subCategori => {
+                                                return (
+                                                    <li><a href="#">{subCategori.name}</a></li>
+                                                )
+                                            })}
+                                        </ul>
                                     </li>
-                            )
-                        })} 
+                                )
+                            })
+                        }
+
+
                     </ul>
                 </li>
+                <li ><a href="#" >EV BAKIM</a></li>
+                <li><a href="#">GÜZELLİK & KİŞİSEL BAKIM</a></li>
+                <li><a href="#">GIDA</a></li>
+                <li><a href="#">SU & İÇECEK</a></li>
             </ul>
+
+
         </div>
     )
 }

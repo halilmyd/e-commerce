@@ -3449,7 +3449,7 @@ const Favories = () => {
         {
             "id": "20292365",
             "variantGroupId": "20292365",
-            "images":   "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4392,7 +4392,7 @@ const Favories = () => {
         {
             "id": "67793860",
             "variantGroupId": "67793860",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4548,7 +4548,7 @@ const Favories = () => {
         {
             "id": "20085798",
             "variantGroupId": "20085798",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -6268,7 +6268,7 @@ const Favories = () => {
         {
             "id": "1909367",
             "variantGroupId": "1909367",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -7831,35 +7831,56 @@ const Favories = () => {
     const [products, setPruducts] = useState([])
 
     useEffect(() => {
-        const favories = (JSON.parse(localStorage.getItem("favoriler")))
-        console.log(favories)
-        const favoriteProducts = []
-        favories.forEach(item => {
+        const basket = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(basket)
+        const basketProducts = []
+        basket.forEach(item => {
             const product = productList.find(x => x.id === item);
-            favoriteProducts.push(product)
+            basketProducts.push(product)
         });
-        console.log(favoriteProducts)
-        setPruducts(favoriteProducts)
+        console.log(basketProducts)
+        setPruducts(basketProducts)
     }, []);
 
     const removeInFavories = (id) => {
         console.log(id)
-        let favories = (JSON.parse(localStorage.getItem("favoriler")))
-        const index = favories.findIndex(p => p === id)
-        favories.splice(index,1)
-        localStorage.setItem("favoriler",JSON.stringify(favories))
-        
-        favories = (JSON.parse(localStorage.getItem("favoriler")))
-        console.log(favories)
-        const favoriteProducts = []
-        favories.forEach(item => {
-          const product = productList.find(x => x.id === item);
-          favoriteProducts.push(product)
+        let basket = (JSON.parse(localStorage.getItem("favoriler")))
+        const index = basket.findIndex(p => p === id)
+        basket.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(basket))
+
+        basket = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(basket)
+        const basketProducts = []
+        basket.forEach(item => {
+            const product = productList.find(x => x.id === item);
+            basketProducts.push(product)
         });
-        console.log(favoriteProducts)
-        setPruducts(favoriteProducts)
-      }
-      const notifyRemove = () => {
+        console.log(basketProducts)
+        setPruducts(basketProducts)
+    }
+    const addBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        basket.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
+
+    }
+    const basketNotifySucces = () => {
+        toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
+
+    const FavoriesNotifyRemove = () => {
         toast.success("Favorilerden Kaldırıldı", {
             position: "top-center",
             autoClose: 1000,
@@ -7873,28 +7894,34 @@ const Favories = () => {
 
     return (
         <div className="Favories">
-            <div className="container">
             <h3 className="baslk">Favoriye Eklenen Ürünler</h3>
-            <b>Ürün Sayısı:{products.length}</b>
-            <br/><br/>
-            {
-                products.map(fvr => {
-                    return (
-                        <div className="Cards">
-                            <Card name={fvr.attributes.find(x => x.fieldName === "shortName").value}
-                                priceWithOutDiscount={fvr.priceTag.priceLabel}
-                                discountedPrice={fvr.priceTag.discountedPriceLabel}
-                                discount={fvr.priceTag.discountRateLabel}
-                                productImage={fvr.images}
-                                addToFavories={(id) => console.log(id)}
-                                removeInFavories={(id) => removeInFavories(id)}
-                                notifyRemove={notifyRemove}
-                                id={fvr.id}
-                            />
-                        </div>
-                    )
-                })
-            }
+            <div className="container">
+
+                <b>Ürün Sayısı:{products.length}</b>
+                <br /><br />
+            
+                {
+
+                    products.map(fvr => {
+                        return (
+                            <div className="Cards">
+                                <Card name={fvr.attributes.find(x => x.fieldName === "shortName").value}
+                                    priceWithOutDiscount={fvr.priceTag.priceLabel}
+                                    discountedPrice={fvr.priceTag.discountedPriceLabel}
+                                    discount={fvr.priceTag.discountRateLabel}
+                                    productImage={fvr.images}
+                                    addToFavories={(id) => console.log(id)}
+                                    removeInFavories={(id) => removeInFavories(id)}
+                                    addBasket={(id) => addBasket(id)}
+                                    removeInBasket={(id) => console.log(id)}
+                                    basketNotifySucces={basketNotifySucces}
+                                    FavoriesNotifyRemove={FavoriesNotifyRemove}
+                                    id={fvr.id}
+                                />
+                            </div>
+                        )
+                    })
+                }
             </div>
             <Footer />
         </div>

@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import { useRouteMatch } from 'react-router-dom';
 import Card from './Card';
+import './Search.css';
+import Categories from './Categories';
+import Footer from './Footer';
+import { toast } from "react-toastify";
 
 
+toast.configure()
 const Search = () => {
     const [productlist, setProductList] = useState([
         {
@@ -7826,28 +7831,132 @@ const Search = () => {
     ]
 
     )
-    const [searchResult, setSearchResult] = useState([])
+    const [searchResult, setSearchResult] = useState(productlist)
     let { path, params } = useRouteMatch();
     const [keyword, setKeyword] = useState(params.keyword)
+    console.log("--->", params, keyword)
 
-    console.log(params, keyword)
+    const addToFavories = (id) => {
+        console.log(id)
+        const favories = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(favories)
+        favories.push(id)
+        localStorage.setItem("favoriler", JSON.stringify(favories))
+    }
+    const removeInFavories = (id) => {
+        console.log(id)
+        const favories = (JSON.parse(localStorage.getItem("favoriler")))
+        const index = favories.findIndex(p => p === id)
+        favories.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(favories))
+    }
+    const notifySucces = () => {
+        toast.success(" Favorilere Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const basketNotifySucces = () => {
+        toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const addBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        basket.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
 
+    }
+    const removeInBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        const index = basket.findIndex(p => p === id)
+        basket.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(basket))
+    }
+
+    const onClickStockButton = () => {
+        console.log('Stokta Olmayanlar Gösterilmiyor')
+        setSearchResult(productlist.filter(p => p.stockStatus !== "NONE"))
+    }
+    const onClickUcuzButton = () => {
+        console.log('Ucuzdan Pahalıya Sıralandı')
+        const result = productlist.sort((a, b) => a.priceTag.discountedPrice - b.priceTag.discountedPrice)
+        console.log(result)
+        setSearchResult(result)
+        onClickStockButton()
+    }
+    const onClickPahalıButton = () => {
+        console.log('Pahalıdan Ucuza Sıralandı')
+        const result = productlist.sort((b, a) => a.priceTag.discountedPrice - b.priceTag.discountedPrice)
+        console.log(result)
+        setSearchResult(result)
+        onClickStockButton()
+    }
     return (
-
         <div className="Search">
-
-            {
-                productlist.forEach(item => {
-                    const urunAdları = item.attributes.find(p => p.fieldName === "shortName").value
-                    if (urunAdları.includes(keyword)) {
-                        console.log(urunAdları)
-
+            <Categories /><br /><br />
+            <div className="container">
+                <div className="sort-by">
+                    <div className="ui checkbox">
+                        <input className="ınput" type="checkbox" onClick={() => onClickStockButton()} name="example" />
+                        <label>Stokta Olmayan Ürünleri Gösterme</label>
+                    </div>
+                    <div className="ui compact menu">
+                        <div className="ui simple dropdown item">
+                            Önerilen Sıralama
+                            <i className="dropdown icon"></i>
+                            <div className="menu">
+                                <div onClick={() => onClickUcuzButton()} className="item">Ucuzdan Pahalıya </div>
+                                <div onClick={() => onClickPahalıButton()} className="item">Pahalıdan Ucuza</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br /><br />
+                {productlist.map(product => {
+                    const shortName = product.attributes.find(p => p.fieldName === "shortName").value
+                    const brand = product.attributes.find(p => p.fieldName === "brand").value
+                    const description = product.attributes.find(p => p.fieldName === "productDescription").value
+                    const categories = product.attributes.find(p=> p.fieldName === "categories").listValueLabel
+                    if (shortName.toLowerCase().includes(keyword.toLowerCase())
+                        || brand.toLowerCase().includes(keyword.toLowerCase()) ||
+                        description.toLowerCase().includes(keyword.toLowerCase()) ||
+                        categories.toString().toLowerCase().includes(keyword.toLowerCase())) {
+                        return (
+                            <div className="Cards search-card">
+                                <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                    priceWithOutDiscount={product.priceTag.priceLabel}
+                                    discountedPrice={product.priceTag.discountedPriceLabel}
+                                    discount={product.priceTag.discountRateLabel}
+                                    productImage={product.images}
+                                    addToFavories={(id) => addToFavories(id)}
+                                    removeInFavories={(id) => removeInFavories(id)}
+                                    addBasket={(id) => addBasket(id)}
+                                    removeInBasket={(id) => removeInBasket(id)}
+                                    id={product.id}
+                                    basketNotifySucces={basketNotifySucces}
+                                    notifySucces={notifySucces}
+                                />
+                            </div>
+                        )
                     }
-                })
-
-
-            }
-
+                })}
+            </div>
+            <Footer />
         </div>
     )
 }

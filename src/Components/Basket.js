@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Card from './Card'
+import Footer from './Footer';
 import { toast } from "react-toastify";
+import XCard from './XCard';
 
 
 toast.configure()
@@ -3448,7 +3449,7 @@ const Basket = () => {
         {
             "id": "20292365",
             "variantGroupId": "20292365",
-            "images":   "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjAzMWU0MmMtMTc2ZS00NDI0LWE1OGItNjIxZjEzMWY0YWNkIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4391,7 +4392,7 @@ const Basket = () => {
         {
             "id": "67793860",
             "variantGroupId": "67793860",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTM0YTY5MDMtMGE5OC00M2EwLTgyNzEtODczOGYyY2ZiZDQ3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -4547,7 +4548,7 @@ const Basket = () => {
         {
             "id": "20085798",
             "variantGroupId": "20085798",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOGI3OWViZGMtMmFlZi00YjMyLTllMjUtZGRlNWE4Y2MyNzBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -6267,7 +6268,7 @@ const Basket = () => {
         {
             "id": "1909367",
             "variantGroupId": "1909367",
-            "images":"https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&" ,
+            "images": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZmU2MmE3YjUtODhjZi00NzI2LTlhODYtNWVhZWU5NDYyYWFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
             "attributes": [
                 {
                     "attType": "LIST",
@@ -7827,37 +7828,38 @@ const Basket = () => {
     ]
 
     )
-      const [products,setPruducts] = useState([])
-     useEffect(() => {
-      const sepet = (JSON.parse(localStorage.getItem("sepetim")))
-      console.log(sepet)
-      const geciceÜrünler = []
-      sepet.forEach(item => {
-        const product = productList.find(x => x.id === item);
-        geciceÜrünler.push(product)
-      });
-      console.log(geciceÜrünler)
-      setPruducts(geciceÜrünler)
-     }, []);
-
-    const addToFavories = (id) => {
-
+    const [products, setPruducts] = useState([])
+    useEffect(() => {
+        const sepet = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(sepet)
+        const geciceÜrünler = []
+        sepet.forEach(item => {
+            const product = productList.find(x => x.id === item);
+            geciceÜrünler.push(product)
+        });
+        console.log(geciceÜrünler)
+        setPruducts(geciceÜrünler)
+    }, []);
+    const removeInBasket = (id) => {
         console.log(id)
-        const favories = (JSON.parse(localStorage.getItem("favoriler")))
-        console.log(favories)
-        favories.push(id)
-        localStorage.setItem("favoriler", JSON.stringify(favories))
+        let basket = (JSON.parse(localStorage.getItem("sepetim")))
+        const index = basket.findIndex(p => p === id)
+        basket.splice(index, 1)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
 
+        basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        const basketProducts = []
+        basket.forEach(item => {
+            const product = productList.find(x => x.id === item);
+            basketProducts.push(product)
+        });
+        console.log(basketProducts)
+        setPruducts(basketProducts)
     }
-    const removeInFavories = (id) => {
-        console.log(id)
-        const favories = (JSON.parse(localStorage.getItem("favoriler")))
-        const index = favories.findIndex(p => p === id)
-        favories.splice(index, 1)
-        localStorage.setItem("favoriler", JSON.stringify(favories))
-    }
-    const notifySucces = () => {
-        toast.success(" Favorilere Eklendi", {
+
+    const BasketNotifyRemove = () => {
+        toast.success("Sepetten Kaldırıldı", {
             position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
@@ -7867,39 +7869,50 @@ const Basket = () => {
             progress: undefined,
         });
     }
-
-    
     return (
-        <div className="Basket container">
-            <div>
-                <h3 className="basket-header">Sepete Eklenen Ürünler</h3>
-                <p> Ürün Sayısı:{products.length}</p>
-                
-                
-                {
-                    products.map((product) => {
-                        return (
-                            <div className="Cards">
-                                
-                                <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
-                                    priceWithOutDiscount={product.priceTag.priceLabel}
-                                    discountedPrice={product.priceTag.discountedPriceLabel}
+        <div className="Basket ">
+            
+            <h3 className="basket-header">Sepete Eklenen Ürünler</h3>
+            
+            <p> Ürün Sayısı:{products.length}</p>
+            
+            <br /><br />
+            <div className="ürün">
+                <div className="urun">
+                    {
+                        
+                        products.map((product) => {
+                            return (
+                                <XCard
+                                    image={product.images}
+                                    price={product.priceTag.discountedPriceLabel}
+                                    name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                    pricewithout={product.priceTag.priceLabel}
                                     discount={product.priceTag.discountRateLabel}
-                                    productImage={product.images}
-                                    addToFavories={(id) => addToFavories(id)}
-                                    removeInFavories={(id) => console.log(id)}
-                                    addBasket={(id) => console.log(id)}
+                                    removeInBasket={(id) => removeInBasket(id)}
+                                    BasketNotifyRemove={BasketNotifyRemove}
                                     id={product.id}
-                                    notifySucces={notifySucces}
 
                                 />
                                 
-                            </div>
-                        )
-                        
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
+                
+                <div className="sepet">
+                    <div><h1>Sepet Toplamı</h1></div>
+                    <div><p><big>Ana Toplam : 120.30₺</big></p></div>
+                    <div><p><big>Unishop Ayrıcalığı: <strike>-40.20₺</strike></big></p></div>
+                    <div><p><big>Ara Toplam: 80.30.00₺</big></p></div>
+                    <div><p><big>Teslimat Ücreti: 10.00₺</big></p></div>
+                    <div><h2><big>Toplam : 90.40₺</big></h2></div> <br />
+                    <div><button class="ui secondary button save">Siparişi Onayla</button></div>
+
+                </div>
             </div>
+            <br /><br /><br /><br />
+            <Footer />
 
         </div>
 

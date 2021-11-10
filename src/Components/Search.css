@@ -1,0 +1,14 @@
+.sort-by{
+    display: flex;
+    justify-content: space-between;
+}
+.searchCard{
+    display: flex;
+}
+.Cards{
+    display: inline-block;
+}
+.search-card{
+    padding-left: 20px;
+}
+    
