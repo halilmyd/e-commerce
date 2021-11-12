@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 import '../Components/Card.css';
 
 const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addToFavories, removeInFavories, notifySucces, productImage,FavoriesNotifyRemove ,addBasket,basketNotifySucces, removeInBasket,removeBasketNotifySucces}) => {
@@ -9,7 +9,9 @@ const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addTo
         <div className="container-card">
           <div className="card-card">
             <div className="imgBx">
+            <Link to={`/detay/${id}`}>
               <img src={productImage} />
+              </Link>
               <ul className="discount-percentage-card">
                 <li className="discount-card">-{discount}%</li>
               </ul>
@@ -21,15 +23,10 @@ const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addTo
               </ul>
             </div>
             <div className="content-card">
-              <div className="rating-card">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa  fa-star" aria-hidden="true"></i>
-                <i className="fa grey fa-star" aria-hidden="true"></i>
-              </div>
               <div className="productName-card">
+              <Link to={`/detay/${id}`}>
                 <h3>{name}</h3>
+                </Link>
               </div>
               <div className="price_rating-card">
                 <h2><b>{discountedPrice}₺</b></h2> <br /><br /><br />

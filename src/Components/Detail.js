@@ -1,19 +1,12 @@
-import React, { useState } from "react";
-import Categories from "../Components/Categories";
-import Snacks from "../Sliders/Snacks";
-import SliderBanner from "../Sliders/SliderBanner";
-import SliderLogo from "../Sliders/SliderLogo";
-import Footer from '../Components/Footer';
-import 'react-toastify/dist/ReactToastify.css';
-import Card from "./Card";
-import './Footer.css'
-import BiutySlider from "../Sliders/BiutySlider";
+import React, {useState} from 'react'
+import DetailCard from './DetailCard';
+import { useRouteMatch } from 'react-router-dom';
 import { toast } from "react-toastify";
 
 
-
 toast.configure()
-const HomePage = () => {
+ const Detail = () => {
+  
     const [productlist, setProductList] = useState([
         {
             "id": "1665700",
@@ -7836,6 +7829,10 @@ const HomePage = () => {
     ]
 
     )
+    let { path, params } = useRouteMatch();
+    const [detay, setDetay] = useState(params.id)
+    console.log("--->", params, detay)
+
     const addToFavories = (id) => {
 
         console.log(id)
@@ -7845,12 +7842,24 @@ const HomePage = () => {
         localStorage.setItem("favoriler", JSON.stringify(favories))
 
     }
-    const removeInFavories = (id) => {
+    const addBasket = (id) => {
         console.log(id)
-        const favories = (JSON.parse(localStorage.getItem("favoriler")))
-        const index = favories.findIndex(p => p === id)
-        favories.splice(index, 1)
-        localStorage.setItem("favoriler", JSON.stringify(favories))
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        console.log(basket)
+        basket.push(id)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
+    
+      }
+      const basketNotifySucces = () => {
+        toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
     const notifySucces = () => {
         toast.success(" Favorilere Eklendi", {
@@ -7863,85 +7872,34 @@ const HomePage = () => {
             progress: undefined,
         });
     }
-    const basketNotifySucces = () => {
-        toast.success(" Sepete Eklendi", {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
-    }
-    const addBasket = (id) => {
-        console.log(id)
-        const basket = (JSON.parse(localStorage.getItem("sepetim")))
-        console.log(basket)
-        basket.push(id)
-        localStorage.setItem("sepetim", JSON.stringify(basket))
-    
-      }
-      const removeInBasket = (id) => {
-        console.log(id)
-        const basket = (JSON.parse(localStorage.getItem("sepetim")))
-        const index = basket.findIndex(p => p === id)
-        basket.splice(index, 1)
-        localStorage.setItem("favoriler", JSON.stringify(basket))
-    }
+
+
     return (
-        <div className="HomePage">
-            <Categories /> 
-                <div className="container">
-                <SliderBanner /><br />
-                    <SliderLogo /><br /><b /><br />
-                    <Snacks /><br /><br /><br />
-                    <BiutySlider /><br /><br /><br />
-                </div>
-                <div className="product-list container">
-                    <h1>KEŞFET</h1>
-                    <p>Avantajlı fiyatlarla alışverişe hemen başlayın!</p>
-                    <br />
-                    {
-                        productlist.map((product) => {
-                            return (
-
-                                <div className="Cards" key={product.id}>
-
-                                    
-                                    <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
-                                        priceWithOutDiscount={product.priceTag.priceLabel}
-                                        discountedPrice={product.priceTag.discountedPriceLabel}
-                                        discount={product.priceTag.discountRateLabel}
-                                        productImage={product.images}
-                                        addToFavories={(id) => addToFavories(id)}
-                                        removeInFavories={(id) => removeInFavories(id)}
-                                        addBasket={(id) => addBasket(id)}
-                                        removeInBasket={(id) => removeInBasket(id)}
-                                        id={product.id}
-                                        basketNotifySucces={basketNotifySucces}
-                                        notifySucces={notifySucces}
-
-                                    />
-                                   
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+        <div className="Detail">
+        {
+            productlist.map(product=>{
+                if(product.id === params.id){
+                    return(
+                        <DetailCard 
+                        urunAdı={product.attributes.find(x => x.fieldName === "shortName").value}
+                        urunAcıklaması={product.attributes.find(x => x.fieldName === "productDescription").value}
+                        urunIndırımOranı={product.priceTag.discountRateLabel}   
+                        urunIndirimliFiyat={product.priceTag.discountedPriceLabel}
+                        urunIndirimsizFiyat={product.priceTag.priceLabel}
+                        urunResmi={product.images}
+                        addToFavories={(id)=> addToFavories(id)}
+                        addBasket={(id)=>addBasket(id)}
+                        basketNotifySucces={basketNotifySucces}
+                        notifySucces={notifySucces}
+                        id={product.id}
+                        />
+                    )
+                }
+            })
+        }
+     
             
-            <div className="myd-store">
-                <h3>Unishop Türkiye</h3>
-                <p>Unishop Türkiye güvencesiyle ve aynı gün teslimat seçenekleriyle temizlikten gıdaya, kahveden oyuncağa 1000'in üzerinde ürünü avantajlı fiyatlarla alın!</p>
-            </div>
-            <br />
-            <br />
-            <br />
-            <Footer />
-
         </div>
     )
 }
-
-export default HomePage;
-
+export default Detail;

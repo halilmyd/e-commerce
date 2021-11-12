@@ -6,6 +6,7 @@
  }
  .xcards p{
    cursor: pointer;
+   color: black;
  }
  
  .xcards  {
@@ -52,19 +53,22 @@
   padding-bottom: 6%;
 }
 .ui.secondary.button{
-  background-color: #6273cf;
+  background-color: #275ce6;
   padding: 20px;
   width: 80%;
+}
+.ui.secondary.button:hover{
+  background-color: #4670da;
 }
 .sepet h2{
   color: white;
   padding-top: 5%;
 }
 
-.icons {
+.close:not(:disabled):not(.disabled)  {
   display: flex;
 }
-.icons:hover{
+.close:not(:disabled):not(.disabled):hover{
   color: red;
 }
 .urunler{

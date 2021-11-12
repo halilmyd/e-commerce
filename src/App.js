@@ -8,6 +8,7 @@ import Basket from './Components/Basket';
 import Login from './Login/Login';
 import './App.css';
 import Search from './Components/Search';
+import Detail from './Components/Detail';
 
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/sepetim" component={Basket} />
             <Route path="/profil" component={Profile} />
             <Route path="/search/:keyword" component={Search} />
+            <Route path="/detay/:id" component={Detail} />
           </Switch>
         </div>
       </Router>

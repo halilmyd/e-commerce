@@ -1,0 +1,66 @@
+.en-dıs{
+    border: solid 1px rgb(214, 214, 214);
+    border-radius: 40px;
+    background: #ffffff;
+    display: flex;
+    padding-bottom:10%;
+    padding-left: 5%;
+   
+
+}
+.en-dıs:hover{
+    border: solid 1px rgb(119, 119, 119);
+}
+.ürün-resmi{
+    padding-top: 12%;
+}
+.ürün-resmi img{
+    
+    width: auto;
+    height: auto;
+}
+.özellik{
+   padding-left: 10%;
+   padding-top: 12%;
+}
+.detail-footer{
+    padding-top: 10% ;
+}
+.urun-baslık h3 {
+    font-size: 35px;
+}
+.urun-acıklama h4{
+    padding-top: 10%;
+}
+.urun-fiyat{
+    display: flex;
+    padding-top: 15%;
+    align-items: center;
+}
+.urun-fiyat h1{
+    color: blue;
+}
+.urun-fiyat h5{
+    color: #727272;
+    padding-left: 10%;
+}
+.urun-fiyat h6{
+    padding-left: 10%;
+    color: red;
+}
+.urun-buton{
+    padding-top: 3%;
+}
+
+.urun-buton img {
+    width: 7%;
+    height: 7%;
+    cursor: pointer;
+    transition: 250ms;
+    
+}
+.urun-buton img:hover{
+   
+   width: 8%;
+   height: 8%;
+}

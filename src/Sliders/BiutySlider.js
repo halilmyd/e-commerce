@@ -7891,7 +7891,7 @@ const BiutySlider = () => {
                     grid={{
                         rows: 3
                     }}
-                    centeredSlides={true}
+                    centeredSlides={false}
 
                     autoplay={{
                         "delay": 2500,

@@ -7894,17 +7894,18 @@ const Favories = () => {
 
     return (
         <div className="Favories">
-            <h3 className="baslk">Favoriye Eklenen Ürünler</h3>
+            <div className="ust">
+                <h3 className="baslk">Favoriye Eklenen Ürünler</h3>
+                <p>Ürün Sayısı:{products.length}</p>
+            </div>
             <div className="container">
-
-                <b>Ürün Sayısı:{products.length}</b>
                 <br /><br />
-            
+
                 {
 
                     products.map(fvr => {
                         return (
-                            <div className="Cards">
+                            <div className="Cards search-card">
                                 <Card name={fvr.attributes.find(x => x.fieldName === "shortName").value}
                                     priceWithOutDiscount={fvr.priceTag.priceLabel}
                                     discountedPrice={fvr.priceTag.discountedPriceLabel}

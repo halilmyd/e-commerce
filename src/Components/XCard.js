@@ -1,15 +1,20 @@
 import React from 'react'
 import '../Components/XCard.css';
+import { Link } from "react-router-dom";
 
  const XCard = ({image,price,name,pricewithout, discount,removeInBasket,BasketNotifyRemove, id }) => {
     return (
         <div className="container urunler ">
       <div className="xcards">
       <div className="resim">
+      <Link to={`/detay/${id}`}>
         <img src={image} />
+        </Link>
       </div>
       <div>
-        <p>{name}</p>
+      <Link to={`/detay/${id}`}>
+        <p className="name-card">{name}</p>
+        </Link>
       </div>
       <div >
         <p><strike>{pricewithout}</strike></p>
@@ -21,7 +26,7 @@ import '../Components/XCard.css';
         <p className="prices"><strong>{price}</strong></p>
       </div>
       <div className="urun-silme">
-      <a onClick={BasketNotifyRemove}><i className="ban icon icons" onClick={() => removeInBasket(id)}></i></a>
+      <a onClick={BasketNotifyRemove}><i className="close icon" onClick={() => removeInBasket(id)}></i></a>
       </div>
       </div>
     </div>

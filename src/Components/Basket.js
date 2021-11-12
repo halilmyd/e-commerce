@@ -7829,17 +7829,24 @@ const Basket = () => {
 
     )
     const [products, setPruducts] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
+
+
     useEffect(() => {
         const sepet = (JSON.parse(localStorage.getItem("sepetim")))
         console.log(sepet)
-        const geciceÜrünler = []
+        const geciciÜrünler = []
+
         sepet.forEach(item => {
             const product = productList.find(x => x.id === item);
-            geciceÜrünler.push(product)
+            geciciÜrünler.push(product)
         });
-        console.log(geciceÜrünler)
-        setPruducts(geciceÜrünler)
+        console.log(geciciÜrünler)
+        setPruducts(geciciÜrünler)
+
+
     }, []);
+
     const removeInBasket = (id) => {
         console.log(id)
         let basket = (JSON.parse(localStorage.getItem("sepetim")))
@@ -7856,6 +7863,8 @@ const Basket = () => {
         });
         console.log(basketProducts)
         setPruducts(basketProducts)
+
+
     }
 
     const BasketNotifyRemove = () => {
@@ -7871,40 +7880,41 @@ const Basket = () => {
     }
     return (
         <div className="Basket ">
-            
+
             <h3 className="basket-header">Sepete Eklenen Ürünler</h3>
-            
+
             <p> Ürün Sayısı:{products.length}</p>
-            
+
             <br /><br />
             <div className="ürün">
                 <div className="urun">
                     {
-                        
+
                         products.map((product) => {
                             return (
-                                <XCard
-                                    image={product.images}
-                                    price={product.priceTag.discountedPriceLabel}
-                                    name={product.attributes.find(x => x.fieldName === "shortName").value}
-                                    pricewithout={product.priceTag.priceLabel}
-                                    discount={product.priceTag.discountRateLabel}
-                                    removeInBasket={(id) => removeInBasket(id)}
-                                    BasketNotifyRemove={BasketNotifyRemove}
-                                    id={product.id}
+                                
+                                    <XCard
+                                        image={product.images}
+                                        price={product.priceTag.discountedPriceLabel}
+                                        name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                        pricewithout={product.priceTag.priceLabel}
+                                        discount={product.priceTag.discountRateLabel}
+                                        removeInBasket={(id) => removeInBasket(id)}
+                                        BasketNotifyRemove={BasketNotifyRemove}
+                                        id={product.id}
 
-                                />
+                                    />
                                 
                             )
                         })
                     }
                 </div>
-                
+
                 <div className="sepet">
                     <div><h1>Sepet Toplamı</h1></div>
-                    <div><p><big>Ana Toplam : 120.30₺</big></p></div>
+                    <div><p><big>Ana Toplam : ₺</big></p></div>
                     <div><p><big>Unishop Ayrıcalığı: <strike>-40.20₺</strike></big></p></div>
-                    <div><p><big>Ara Toplam: 80.30.00₺</big></p></div>
+                    <div><p><big>Ara Toplam: 80.00₺</big></p></div>
                     <div><p><big>Teslimat Ücreti: 10.00₺</big></p></div>
                     <div><h2><big>Toplam : 90.40₺</big></h2></div> <br />
                     <div><button class="ui secondary button save">Siparişi Onayla</button></div>
@@ -7919,3 +7929,9 @@ const Basket = () => {
     )
 }
 export default Basket;
+
+
+
+
+
+
