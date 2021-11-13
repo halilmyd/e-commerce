@@ -42,9 +42,9 @@
   padding-right: 5%;
 }
 .sepet p {
-  color: white;
+  color: rgb(0, 0, 0);
   border: solid 1px rgb(153 153 153);
-  background: #6273cf;
+  background: #e3e3e3;
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -52,13 +52,14 @@
   color: white;
   padding-bottom: 6%;
 }
-.ui.secondary.button{
-  background-color: #275ce6;
+.ui.inverted.button{
+  color: black;
+  background-color: #e0e1e2;
   padding: 20px;
   width: 80%;
 }
-.ui.secondary.button:hover{
-  background-color: #4670da;
+.ui.inverted.button:hover{
+  background-color: #949494;
 }
 .sepet h2{
   color: white;

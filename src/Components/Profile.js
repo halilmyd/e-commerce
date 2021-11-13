@@ -2,7 +2,7 @@ import React from 'react'
 import '../Components/Profile.css';
 import Categories from './Categories';
 import Footer from './Footer';
-import { Link } from "react-router-dom";
+
 
 const cıkısYap = () => {
     localStorage.setItem("isLogin", "false")
@@ -62,12 +62,14 @@ const Profile = () => {
                             <div class="ui input focus">
                                 <input type="text" value="21.03.2000" />
                             </div>
+                            
                             <li><h5>Cinsiyet</h5></li>
+                            <div className="gender">
                             <select class="ui dropdown" >
                                 <option value="">Erkek</option>
                                 <option value="1">Cinsiyet</option>
                                 <option value="0">Kadın</option>
-                            </select> <br/><br/><br/>
+                            </select></div> <br/><br/>
                             <div className="ui checkbox">
                                 <input className="ınput" type="checkbox" name="example" checked="true"/>
                                 <label>Üyeliğimin kapsamında sağladığım kişisel verilerimin Unilever Sanayi ve Ticaret Türk A.Ş (“Unilever”) tarafından 6698 sayılı Kişisel Verilerin Korunması Kanunu’na uygun olarak kullanılmasına izin veriyorum.</label>

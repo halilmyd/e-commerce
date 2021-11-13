@@ -7917,7 +7917,7 @@ const Basket = () => {
                     <div><p><big>Ara Toplam: 80.00₺</big></p></div>
                     <div><p><big>Teslimat Ücreti: 10.00₺</big></p></div>
                     <div><h2><big>Toplam : 90.40₺</big></h2></div> <br />
-                    <div><button class="ui secondary button save">Siparişi Onayla</button></div>
+                    <div><button class="ui inverted button">Siparisi Onayla</button></div>
 
                 </div>
             </div>
