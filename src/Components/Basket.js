@@ -7829,12 +7829,15 @@ const Basket = () => {
 
     )
     const [products, setPruducts] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0)
+    const [totalPrice, setTotalPrice] = useState([])
+    
 
+    let anaToplam = 0;
+    let araToplam = 0;
 
     useEffect(() => {
         const sepet = (JSON.parse(localStorage.getItem("sepetim")))
-        console.log(sepet)
+        // console.log(sepet)
         const geciciÜrünler = []
 
         sepet.forEach(item => {
@@ -7843,7 +7846,8 @@ const Basket = () => {
         });
         console.log(geciciÜrünler)
         setPruducts(geciciÜrünler)
-
+        setTotalPrice(geciciÜrünler.map(item => item.priceTag))
+        
 
     }, []);
 
@@ -7865,6 +7869,24 @@ const Basket = () => {
         setPruducts(basketProducts)
 
 
+    }
+    const addToFavories = (id) => {
+        console.log(id)
+        const favories = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(favories)
+        favories.push(id)
+        localStorage.setItem("favoriler", JSON.stringify(favories))
+    }
+    const notifySucces = () => {
+        toast.success(" Favorilere Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
     const BasketNotifyRemove = () => {
@@ -7892,34 +7914,48 @@ const Basket = () => {
 
                         products.map((product) => {
                             return (
-                                
-                                    <XCard
-                                        image={product.images}
-                                        price={product.priceTag.discountedPriceLabel}
-                                        name={product.attributes.find(x => x.fieldName === "shortName").value}
-                                        pricewithout={product.priceTag.priceLabel}
-                                        discount={product.priceTag.discountRateLabel}
-                                        removeInBasket={(id) => removeInBasket(id)}
-                                        BasketNotifyRemove={BasketNotifyRemove}
-                                        id={product.id}
 
-                                    />
-                                
+                                <XCard
+                                    image={product.images}
+                                    price={product.priceTag.discountedPriceLabel}
+                                    name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                    pricewithout={product.priceTag.priceLabel}
+                                    discount={product.priceTag.discountRateLabel}
+                                    removeInBasket={(id) => removeInBasket(id)}
+                                    BasketNotifyRemove={BasketNotifyRemove}
+                                    notifySucces={notifySucces}
+                                    addToFavories={(id) => addToFavories(id)}
+                                    id={product.id}
+
+                                />
+
                             )
                         })
                     }
                 </div>
 
+                {
+                    totalPrice.forEach(item => {
+                        console.log(item.price)
+                        anaToplam = item.price + anaToplam;
+                        console.log("anatoplam",anaToplam)
+                        araToplam = item.discountedPrice + araToplam;
+                        console.log("aratoplam",araToplam)
+                    })
+                }
+                
+
                 <div className="sepet">
                     <div><h1>Sepet Toplamı</h1></div>
-                    <div><p><big>Ana Toplam : ₺</big></p></div>
-                    <div><p><big>Unishop Ayrıcalığı: <strike>-40.20₺</strike></big></p></div>
-                    <div><p><big>Ara Toplam: 80.00₺</big></p></div>
-                    <div><p><big>Teslimat Ücreti: 10.00₺</big></p></div>
-                    <div><h2><big>Toplam : 90.40₺</big></h2></div> <br />
+                    <div><p><big>Ana Toplam :{(anaToplam / 100)} ₺</big></p></div>
+                    <div><p><big>Unishop Ayrıcalığı:<strike>{((anaToplam - araToplam) / 100)}₺</strike></big></p></div>
+                    <div><p><big>Ara Toplam:{(araToplam / 100)} ₺</big></p></div>
+                    <div><p><big>Teslimat Ücreti: 10.0₺</big></p></div>
+                    <div><h2>Toplam :<big> {(araToplam / 100) + 10.0 }₺</big></h2></div> <br />
                     <div><button class="ui inverted button">Siparisi Onayla</button></div>
 
                 </div>
+
             </div>
             <br /><br /><br /><br />
             <Footer />

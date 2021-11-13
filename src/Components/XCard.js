@@ -2,7 +2,7 @@ import React from 'react'
 import '../Components/XCard.css';
 
 
- const XCard = ({image,price,name,pricewithout, discount,removeInBasket,BasketNotifyRemove, id }) => {
+ const XCard = ({image,price,name,pricewithout, discount,removeInBasket,BasketNotifyRemove, id ,addToFavories,notifySucces}) => {
     return (
         <div className="container urunler ">
       <div className="xcards">
@@ -27,6 +27,7 @@ import '../Components/XCard.css';
       </div>
       <div className="urun-silme">
       <a onClick={BasketNotifyRemove}><i className="close icon" onClick={() => removeInBasket(id)}></i></a>
+      <a onClick={() => addToFavories(id)}><i className="heart icon kalp" onClick={notifySucces} ></i></a>
       </div>
       </div>
     </div>

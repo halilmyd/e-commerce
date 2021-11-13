@@ -7914,6 +7914,7 @@ const Search = () => {
                     <div className="ui checkbox">
                         <input className="ınput" type="checkbox" onClick={() => onClickStockButton()} name="example" />
                         <label>Stokta Olmayan Ürünleri Gösterme</label>
+                        
                     </div>
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">

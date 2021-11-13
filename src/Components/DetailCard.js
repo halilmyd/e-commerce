@@ -30,7 +30,7 @@ const DetailCard = ({urunAcıklaması,urunAdı,urunIndırımOranı,id,notifySucc
                         <h6>-{urunIndırımOranı}%</h6>
                     </div>
                     <div className="urun-buton">
-                        <a onClick={basketNotifySucces}><button onClick={()=>addBasket(id)} class="ui secondary button save">Sepete Ekle</button></a>
+                        <a onClick={basketNotifySucces}><button onClick={()=>addBasket(id)} class="ui primary button butons ">Sepete Ekle</button></a>
                         <a onClick={notifySucces}><img  onClick={()=>addToFavories(id)} src="https://imgyukle.com/f/2021/11/13/ksCfEs.png"/></a>
                     </div>
 
