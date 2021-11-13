@@ -84,9 +84,7 @@ nav {
 .Basket{
   text-align: center;
 }
-.Profile{
-  padding-left: 13%;
-}
+
 .swiper-container-horizontal > .swiper-pagination-bullets {
   display: none;
 }

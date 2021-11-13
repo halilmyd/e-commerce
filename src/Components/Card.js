@@ -9,9 +9,9 @@ const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addTo
         <div className="container-card">
           <div className="card-card">
             <div className="imgBx">
-            <Link to={`/detay/${id}`}>
-              <img src={productImage} />
-              </Link>
+            
+              <a href={`/detay/${id}`}><img src={productImage} /></a>
+              
               <ul className="discount-percentage-card">
                 <li className="discount-card">-{discount}%</li>
               </ul>
@@ -24,9 +24,9 @@ const Card = ({ name, priceWithOutDiscount, discountedPrice, discount, id, addTo
             </div>
             <div className="content-card">
               <div className="productName-card">
-              <Link to={`/detay/${id}`}>
+              <a href={`/detay/${id}`}>
                 <h3>{name}</h3>
-                </Link>
+                </a>
               </div>
               <div className="price_rating-card">
                 <h2><b>{discountedPrice}₺</b></h2> <br /><br /><br />

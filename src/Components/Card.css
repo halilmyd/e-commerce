@@ -6,6 +6,9 @@
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+.Card a {
+  text-decoration: none;
+}
 .container-card .card-card {
   
 max-height: 420px;

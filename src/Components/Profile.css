@@ -1,0 +1,70 @@
+.profile-name{
+    display: flex;
+    width: 50%;
+}
+.profile-name .font-weight-bold{
+    padding-top: 13%;
+}
+.font-weight-bold{
+    padding-top: 5%;
+}
+.profile-menu{
+    padding-top: 3%;
+    padding-bottom: 15%;
+}
+.profile-login-input{
+    padding-left: 20%;
+}
+.right-profile{
+    display: flex;
+}
+.profile-menu ul{
+    display: inline-block;
+    border: solid 1px rgb(170, 170, 170);
+    list-style-type: none;
+    border-radius: 15px;
+    width: 250%;
+    height: 600px;
+    
+}
+.profile-menu li a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+    
+}
+.profile-menu li{
+    cursor: pointer;
+    padding-top: 10%;
+
+}
+.profile-menu li a:hover {
+   color: #275CE6;
+}
+.font-weight-bold{
+    padding-left: 10px;
+}
+.profile-name img {
+    width: 15%;
+}
+.profile-login-input ul {
+    list-style-type: none;
+}
+.profile-login-input li{
+    padding: 10px;
+}
+.ui.primary.button{
+    width: 40%;
+    height: 50px;
+    background-color: #275ce6;
+}
+.ui.input>input {
+    width: 300px;
+}
+select.ui.dropdown{
+    width: 300px;
+}
+.profile-name h2{
+    padding-top: 12%;
+    padding-left: 15%;
+}

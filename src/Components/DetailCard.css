@@ -3,16 +3,17 @@
     border-radius: 40px;
     background: #ffffff;
     display: flex;
-    padding-bottom:10%;
-    padding-left: 5%;
+    padding-bottom:5%;
+    padding-left: 3%;
    
 
 }
 .en-dıs:hover{
     border: solid 1px rgb(119, 119, 119);
+   
 }
 .ürün-resmi{
-    padding-top: 12%;
+    padding-top: 8%;
 }
 .ürün-resmi img{
     
@@ -21,7 +22,7 @@
 }
 .özellik{
    padding-left: 10%;
-   padding-top: 12%;
+   padding-top: 8%;
 }
 .detail-footer{
     padding-top: 10% ;
