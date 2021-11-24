@@ -7831,7 +7831,8 @@ toast.configure()
     )
     let { path, params } = useRouteMatch();
     const [detay, setDetay] = useState(params.id)
-    console.log("--->", params, detay)
+    console.log("--->",params, detay)
+
 
     const addToFavories = (id) => {
 
@@ -7850,8 +7851,27 @@ toast.configure()
         localStorage.setItem("sepetim", JSON.stringify(basket))
     
       }
+      const removeInBasket = (id) => {
+        console.log(id)
+        const basket = (JSON.parse(localStorage.getItem("sepetim")))
+        const index = basket.findIndex(p => p === id)
+        basket.splice(index, 1)
+        localStorage.setItem("sepetim", JSON.stringify(basket))
+    }
       const basketNotifySucces = () => {
         toast.success(" Sepete Eklendi", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    
+    const BasketNotifyRemove = () => {
+        toast.success("Sepetten Kaldırıldı", {
             position: "top-center",
             autoClose: 1000,
             hideProgressBar: false,
@@ -7872,7 +7892,24 @@ toast.configure()
             progress: undefined,
         });
     }
-
+    const FavoriesNotifyRemove = () => {
+        toast.success("Favorilerden Kaldırıldı", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const removeInFavories = (id) => {
+        console.log(id)
+        const favories = (JSON.parse(localStorage.getItem("favoriler")))
+        const index = favories.findIndex(p => p === id)
+        favories.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(favories))
+    }
 
     return (
         <div className="Detail">
@@ -7889,8 +7926,12 @@ toast.configure()
                         urunResmi={product.images}
                         addToFavories={(id)=> addToFavories(id)}
                         addBasket={(id)=>addBasket(id)}
+                        removeInBasket={(id) => removeInBasket(id)}
                         basketNotifySucces={basketNotifySucces}
+                        BasketNotifyRemove={BasketNotifyRemove}
+                        FavoriesNotifyRemove={FavoriesNotifyRemove}
                         notifySucces={notifySucces}
+                        removeInFavories={removeInFavories}
                         id={product.id}
                         />
                     )

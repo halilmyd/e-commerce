@@ -69,7 +69,7 @@
 }
 
 .Login .loginss {
-	background-color: #ff9600;
+	background-color:#275ce6 ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -290,11 +290,11 @@
 	margin-bottom:0;
   }
   .overlay-right h1{
-	color: #ff9600;
+	color:#275ce6;
   }
   .overlay-right h2{
-	color: #ff9600;
+	color: #275ce6;
   }
   .overlay-right p{
-	color: #ff9600;
+	color: #275ce6;
   }

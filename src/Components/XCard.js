@@ -1,8 +1,21 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
 import '../Components/XCard.css';
 
 
- const XCard = ({image,price,name,pricewithout, discount,removeInBasket,BasketNotifyRemove, id ,addToFavories,notifySucces}) => {
+ const XCard = ({image,price,name,pricewithout, discount,removeInBasket,BasketNotifyRemove, id ,addToFavories,notifySucces,removeInFavories,FavoriesNotifyRemove}) => {
+  const [urunFavorilerdeMi, setUrunFavorilerdeMi] = useState(false)
+
+  useEffect(() => { 
+  
+    const favoriler = (JSON.parse(localStorage.getItem("favoriler")))
+    console.log("favoriler",favoriler)
+    if(favoriler.includes(id)){
+      setUrunFavorilerdeMi(true)
+    }
+    
+},[])
+
+  
     return (
         <div className="container urunler ">
       <div className="xcards">
@@ -27,7 +40,8 @@ import '../Components/XCard.css';
       </div>
       <div className="urun-silme">
       <a onClick={BasketNotifyRemove}><i className="close icon" onClick={() => removeInBasket(id)}></i></a>
-      <a onClick={() => addToFavories(id)}><i className="heart icon kalp" onClick={notifySucces} ></i></a>
+      {!urunFavorilerdeMi && <a onClick={notifySucces}><i className="heart outline icon kalp" onClick={() => addToFavories(id)}></i></a>}
+      {urunFavorilerdeMi &&<a onClick={FavoriesNotifyRemove}><i className="heart icon kalp" onClick={() => removeInFavories(id)}></i></a>}
       </div>
       </div>
     </div>

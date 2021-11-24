@@ -35,7 +35,7 @@
 }
 .profile-menu li{
     cursor: pointer;
-    padding-top: 10%;
+    padding-top: 9.5%;
 
 }
 .profile-menu li a:hover {
@@ -49,6 +49,7 @@
 }
 .profile-login-input ul {
     list-style-type: none;
+    padding-top: 20px;
 }
 .profile-login-input li{
     padding: 10px;
@@ -64,13 +65,56 @@
 select.ui.dropdown{
     width: 300px;
 }
+.Adress .profile-name h2{
+    padding-top: 30%;
+    padding-left: 10%;
+}
 .profile-name h2{
-    padding-top: 12%;
-    padding-left: 12%;
+    padding-top: 70px;
+    padding-left: 10%;
 }
 .ui.input{
     padding-left: 11px;
 }
 .gender{
     padding-left: 11px;
+}
+.Adress .profile-menu ul{
+    display: inline-block;
+    list-style-type: none;
+    width: 150%;
+    
+}
+.adress-form{
+    padding-top: 35px;
+    padding-left: 19%;
+}
+.foto{
+    display: flex;
+}
+.isims{
+    padding-left: 10px;
+}
+.metinler{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.y-card {
+    width: 100%;
+    height: 80px;
+    border:solid 1px #9b9b9b;
+    background-color: rgb(238, 238, 238);
+}
+.adres-ismi{
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+
+.y-card .çarpı{
+    color: red;
+    font-size: large;
+    cursor: pointer;
+    
 }

@@ -1,0 +1,45 @@
+.ui.fluid.dropdown {
+    width: 100%;
+    
+}
+.border .ui.input.focus>input{
+    width: 680px;
+}
+
+.ilce-mahalle .ui.fluid.dropdown{
+    width: 330px;
+}
+.ilce-mahalle{
+    display: flex; 
+    padding-left: 10px;
+}
+.mahalle{
+    padding-left: 21px;
+}
+.nolar  {
+    display: flex;
+    justify-content: space-between;
+}
+.nolar .ui.input {
+ width: 200px;
+}
+.kat{
+    padding-left: 25px;
+}
+.kapı-no{
+    padding-left: 25px;
+}
+.Form .ui.secondary.button {
+    width: 100%;
+    background: #275ce6;
+}
+.Form .ui.secondary.button:hover {
+    background: #4377fd;
+}
+.border {
+    display: inline-block;
+    padding-top: 10px;
+}
+.sehir{
+    padding-left: 10px;
+}

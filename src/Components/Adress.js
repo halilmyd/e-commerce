@@ -1,24 +1,29 @@
-import React from 'react'
-import '../Components/Profile.css';
-import Categories from './Categories';
+import React, {useEffect} from 'react'
 import Footer from './Footer';
+import Categories from './Categories';
+import Form from './Form';
+import AdressCard from './AdressCard';
+
+const Adress = () => {
 
 
-const cıkısYap = () => {
-    localStorage.setItem("isLogin", "false")
-    window.location.href = "/login"
-}
-
-const Profile = () => {
+    const cıkısYap = () => {
+        localStorage.setItem("isLogin", "false")
+        window.location.href = "/login"
+    }
     return (
-        <div className="Profile">
+        <div className="Adress">
             <Categories />
             <div className="container">
 
                 <div className="profile-name">
-                    <img className="rounded-circle mt-5" src="https://imgyukle.com/f/2021/11/08/kcAJu1.jpg" />
-                    <h5 className="font-weight-bold">Halil İbrahim Mayda </h5>
-                    <h2>Profil Bilgilerim</h2>
+                    <div className="foto">
+                        <img className="rounded-circle mt-5" src="https://imgyukle.com/f/2021/11/08/kcAJu1.jpg" />
+                        <h5 className="font-weight-bold">Halil İbrahim Mayda </h5>
+                    </div>
+                    <div className="baslık-adreslerim">
+                        <h2>Adreslerim</h2>
+                    </div>
                 </div>
                 <div className="right-profile">
                     <div className="profile-menu">
@@ -35,63 +40,16 @@ const Profile = () => {
                             <li onClick={() => cıkısYap()}><svg className="Account_Icon__RBzCV" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 17L4 11L10 5" stroke="black" strokeWidth="2" strokeLinejoin="round"></path><path d="M10 25H21C22.8565 25 24.637 24.2625 25.9497 22.9497C27.2625 21.637 28 19.8565 28 18V18C28 17.0807 27.8189 16.1705 27.4672 15.3212C27.1154 14.4719 26.5998 13.7003 25.9498 13.0502C25.2997 12.4002 24.5281 11.8846 23.6788 11.5328C22.8295 11.1811 21.9193 11 21 11H4" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg><a href="#">Çıkış</a></li>
                         </ul>
                     </div>
-                    <div className="profile-login-input">
+                    <div className="adress-form">
+                        <Form />
                         
-                        <ul>
-                            <li><h5>Ad</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="Halil İbrahim" />
-                            </div>
-                            <li><h5>Soyad</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="Mayda" />
-                            </div>
-                            <li><h5>Kurum Adı</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="Unilever" />
-                            </div>
-                            <li><h5>Email</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="ibomyd@hotmail.com" />
-                            </div>
-                            <li><h5>Telefon Numarası</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="0546 295 0252" />
-                            </div>
-                            <li><h5>Doğum Tarihi</h5></li>
-                            <div className="ui input focus">
-                                <input type="text" value="21.03.2000" />
-                            </div>
-                            
-                            <li><h5>Cinsiyet</h5></li>
-                            <div className="gender">
-                            <select className="ui dropdown" >
-                                <option value="">Erkek</option>
-                                <option value="1">Cinsiyet</option>
-                                <option value="0">Kadın</option>
-                            </select></div> <br/><br/>
-                            <div className="ui checkbox">
-                                <input className="ınput" type="checkbox" name="example" checked="true"/>
-                                <label>Üyeliğimin kapsamında sağladığım kişisel verilerimin Unilever Sanayi ve Ticaret Türk A.Ş (“Unilever”) tarafından 6698 sayılı Kişisel Verilerin Korunması Kanunu’na uygun olarak kullanılmasına izin veriyorum.</label>
-                            </div><div className="ui checkbox">
-                                <input className="ınput" type="checkbox" name="example" checked="true"/>
-                                <label>Unilever tarafından Unilever’in sahibi olduğu markalar ile ilgili olarak [bana özel fırsat ve deneyimlerden haberdar olmam amacıyla] ticari elektronik ileti gönderilmesine izin veriyorum.</label>
-                            </div><br/><br/>
-                            <button className="ui primary button butons">
-                                Kaydet
-                            </button>
-
-                        </ul>
                     </div>
+                    
 
                 </div>
-
-
             </div>
             <Footer />
         </div>
-
-
     )
 }
-export default Profile;
+export default Adress;

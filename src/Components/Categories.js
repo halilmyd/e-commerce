@@ -1213,24 +1213,26 @@ const Categories = () => {
         <div className="Categories  ">
             <ul className="menuAlan container">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <img className="menu-icon" src="https://imgyukle.com/f/2021/11/10/khV0oe.png" />
                         Kategoriler
                         <img className="down-icon" src="https://imgyukle.com/f/2021/11/10/khnk5Y.png" />
                     </a>
                     <ul>
                         {
-                            categories.map(categori => {
+                            categories.map((categori) => {
                                 return (
-                                    <li><a href="">{categori.name}</a>
+                                   
+                                    <li key={categori.id}><a href="">{categori.name}</a>
                                         <ul>
                                             {categori.subCategories.map(subCategori => {
                                                 return (
-                                                    <li><a href="#">{subCategori.name}</a></li>
+                                                    <li key={subCategori.id}><a href="#">{subCategori.name}</a></li>
                                                 )
                                             })}
                                         </ul>
                                     </li>
+                                    
                                 )
                             })
                         }
@@ -1238,10 +1240,10 @@ const Categories = () => {
 
                     </ul>
                 </li>
-                <li ><a href="#" >EV BAKIM</a></li>
-                <li><a href="#">GÜZELLİK & KİŞİSEL BAKIM</a></li>
-                <li><a href="#">GIDA</a></li>
-                <li><a href="#">SU & İÇECEK</a></li>
+                <li ><a href="/search/EV BAKIM" >EV BAKIM</a></li>
+                <li><a href="/search/GÜZELLİK & KİŞİSEL BAKIM">GÜZELLİK & KİŞİSEL BAKIM</a></li>
+                <li><a href="/search/GIDA">GIDA</a></li>
+                <li><a href="/search/ÇORBA">MUTFAK ÜRÜNLERİ</a></li>
             </ul>
 
 

@@ -1,0 +1,53 @@
+.Categories ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+
+.Categories .menu  li a img{
+    width: 12px;
+}
+ .Categories .menu a {
+    text-decoration: none;
+}
+.Categories .menu li {
+    display: block;
+   
+}
+
+
+.Categories .menu >li >a{
+    display: block;
+    left: 50%;
+    font-size: 14px;
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-right:  1px solid rgba(0, 0, 0, .1); 
+}
+.Categories .menu ul{
+    background-color: #ffaa2c;
+    font-size: 11px;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    left:0; 
+    opacity: 0;
+    transition: 250ms all;
+    visibility: hidden;
+    list-style-type: none;
+}
+.Categories .menu ul h6 {
+    display: block;
+    padding: 7px 30px;
+    color: #000;
+    
+}
+.Categories .menu >li:hover ul {
+  
+   opacity: 1;
+   visibility: visible;
+    position: absolute;
+    z-index: 9999;
+} 

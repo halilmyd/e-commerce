@@ -7830,34 +7830,36 @@ const Favories = () => {
     )
     const [products, setPruducts] = useState([])
 
+
     useEffect(() => {
-        const basket = (JSON.parse(localStorage.getItem("favoriler")))
-        console.log(basket)
-        const basketProducts = []
-        basket.forEach(item => {
+        const favoriler = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(favoriler)
+        const favorilerProducts = []
+        favoriler.forEach(item => {
             const product = productList.find(x => x.id === item);
-            basketProducts.push(product)
+            favorilerProducts.push(product)
         });
-        console.log(basketProducts)
-        setPruducts(basketProducts)
+        console.log(favorilerProducts)
+        setPruducts(favorilerProducts)
+        
     }, []);
 
     const removeInFavories = (id) => {
         console.log(id)
-        let basket = (JSON.parse(localStorage.getItem("favoriler")))
-        const index = basket.findIndex(p => p === id)
-        basket.splice(index, 1)
-        localStorage.setItem("favoriler", JSON.stringify(basket))
+        let favoriler = (JSON.parse(localStorage.getItem("favoriler")))
+        const index = favoriler.findIndex(p => p === id)
+        favoriler.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(favoriler))
 
-        basket = (JSON.parse(localStorage.getItem("favoriler")))
-        console.log(basket)
-        const basketProducts = []
-        basket.forEach(item => {
+        favoriler = (JSON.parse(localStorage.getItem("favoriler")))
+        console.log(favoriler)
+        const favorilerProducts = []
+        favoriler.forEach(item => {
             const product = productList.find(x => x.id === item);
-            basketProducts.push(product)
+            favorilerProducts.push(product)
         });
-        console.log(basketProducts)
-        setPruducts(basketProducts)
+        console.log(favorilerProducts)
+        setPruducts(favorilerProducts)
     }
     const addBasket = (id) => {
         console.log(id)
@@ -7891,22 +7893,28 @@ const Favories = () => {
             progress: undefined,
         });
     }
+     
 
     return (
+        
         <div className="Favories">
             <div className="ust">
                 <h3 className="baslk">Favoriye Eklenen Ürünler</h3>
                 <p>Ürün Sayısı:{products.length}</p>
+                
             </div>
             <div className="container">
                 <br /><br />
+                
 
                 {
-
+                    
                     products.map(fvr => {
+                      console.log("favori id",fvr.id)
                         return (
                             <div className="Cards search-card">
                                 <Card name={fvr.attributes.find(x => x.fieldName === "shortName").value}
+                                
                                     priceWithOutDiscount={fvr.priceTag.priceLabel}
                                     discountedPrice={fvr.priceTag.discountedPriceLabel}
                                     discount={fvr.priceTag.discountRateLabel}

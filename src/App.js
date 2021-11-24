@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import HomePage from './Components/HomePage';
 import Nav from './Nav';
 import Profile from './Components/Profile';
@@ -9,6 +9,7 @@ import Login from './Login/Login';
 import './App.css';
 import Search from './Components/Search';
 import Detail from './Components/Detail';
+import Adress from './Components/Adress';
 
 
 
@@ -37,7 +38,9 @@ function App() {
             <Route path="/sepetim" component={Basket} />
             <Route path="/profil" component={Profile} />
             <Route path="/search/:keyword" component={Search} />
+            <Redirect from="/search/" to="/search/ "/>
             <Route path="/detay/:id" component={Detail} />
+            <Route path="/adreslerim" component={Adress} />
           </Switch>
         </div>
       </Router>

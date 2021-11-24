@@ -6,7 +6,6 @@ import Categories from './Categories';
 import Footer from './Footer';
 import { toast } from "react-toastify";
 
-
 toast.configure()
 const Search = () => {
     const [productlist, setProductList] = useState([
@@ -7833,7 +7832,7 @@ const Search = () => {
     )
     const [searchResult, setSearchResult] = useState(productlist)
     let { path, params } = useRouteMatch();
-    const [keyword, setKeyword] = useState(params.keyword)
+    const [keyword, setKeyword] = useState(params.keyword || "")
     console.log("--->", params, keyword)
 
     const addToFavories = (id) => {
@@ -7906,6 +7905,7 @@ const Search = () => {
         setSearchResult(result)
         onClickStockButton()
     }
+    console.log("ÇALIŞTI")
     return (
         <div className="Search">
             <Categories /><br /><br />
@@ -7914,7 +7914,7 @@ const Search = () => {
                     <div className="ui checkbox">
                         <input className="ınput" type="checkbox" onClick={() => onClickStockButton()} name="example" />
                         <label>Stokta Olmayan Ürünleri Gösterme</label>
-                        
+
                     </div>
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
@@ -7932,11 +7932,13 @@ const Search = () => {
                     const shortName = product.attributes.find(p => p.fieldName === "shortName").value
                     const brand = product.attributes.find(p => p.fieldName === "brand").value
                     const description = product.attributes.find(p => p.fieldName === "productDescription").value
-                    const categories = product.attributes.find(p=> p.fieldName === "categories").listValueLabel
+                    const categories = product.attributes.find(p => p.fieldName === "categories").listValueLabel
+                    console.log("KATEGORİ ",categories)
                     if (shortName.toLowerCase().includes(keyword.toLowerCase())
                         || brand.toLowerCase().includes(keyword.toLowerCase()) ||
                         description.toLowerCase().includes(keyword.toLowerCase()) ||
                         categories.toString().toLowerCase().includes(keyword.toLowerCase())) {
+                            console.log("if e girdi ", product)
                         return (
                             <div className="Cards search-card">
                                 <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
@@ -7954,8 +7956,30 @@ const Search = () => {
                                 />
                             </div>
                         )
+                    } else if (keyword.length === 0) {
+                        console.log("elseif e girdi ", product)
+                        return (
+                            <div className="Cards search-card">
+                                <Card name={product.attributes.find(x => x.fieldName === "shortName").value}
+                                    priceWithOutDiscount={product.priceTag.priceLabel}
+                                    discountedPrice={product.priceTag.discountedPriceLabel}
+                                    discount={product.priceTag.discountRateLabel}
+                                    productImage={product.images}
+                                    addToFavories={(id) => addToFavories(id)}
+                                    removeInFavories={(id) => removeInFavories(id)}
+                                    addBasket={(id) => addBasket(id)}
+                                    removeInBasket={(id) => removeInBasket(id)}
+                                    id={product.id}
+                                    basketNotifySucces={basketNotifySucces}
+                                    notifySucces={notifySucces}
+                                />
+                            </div>
+                        )
+
                     }
                 })}
+
+
             </div>
             <Footer />
         </div>

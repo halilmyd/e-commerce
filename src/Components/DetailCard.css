@@ -65,3 +65,16 @@
    width: 8%;
    height: 8%;
 }
+.urun-buton i.icon.outline.kalps {
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+i.heart.icon.kalps{
+    font-size: xx-large;
+    cursor: pointer;
+
+}
+i.heart.icon.kalps:hover{
+    color: red;
+}

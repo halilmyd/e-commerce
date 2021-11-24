@@ -121,3 +121,17 @@ nav {
 .ui.icon.input>input{
   width: 450px;
 }
+
+.ui.button{
+  background: #275ce6;
+} 
+.ui.button:hover {
+  background: #cccccc;
+}
+.nav-right .icon{
+  color: rgb(238, 238, 238);
+}
+.urun-yok{
+  padding-top: 50px;
+  padding-bottom: 400px;
+}

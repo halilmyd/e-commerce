@@ -9,7 +9,7 @@ function Nav() {
     const [keyword,setKeyword] = useState("")
 
     const searchClick =()=> {
-     window.location.href="/search/" + keyword
+     window.location.href="/search/" +( keyword || " " )
     } 
 
     const onKeyUp =(event)=> {
@@ -36,15 +36,15 @@ function Nav() {
                     </div>
                     <div className="nav-right">
                         <Link to="/profil">
-                            <div className="ui vertical animated button" tabindex="0">
+                            <div className="ui vertical animated button" tabIndex="0">
                                 <div className="hidden content">Profil</div>
                                 <div className="visible content">
-                                    <i class="user icon"></i>
+                                    <i className="user icon"></i>
                                 </div>
                             </div>
                         </Link>
                         <Link to="/sepetim">
-                            <div className="ui vertical animated button" tabindex="0">
+                            <div className="ui vertical animated button" tabIndex="0">
                                 <div className="hidden content">Sepet</div>
                                 <div className="visible content">
                                     <i className="shop icon"></i>
@@ -52,7 +52,7 @@ function Nav() {
                             </div>
                         </Link>
                         <Link to="/favoriler">
-                            <div className="ui vertical animated button" tabindex="0">
+                            <div className="ui vertical animated button" tabIndex="0">
                                 <div className="hidden content">Favoriler</div>
                                 <div className="visible content">
                                     <i className="heart icon"></i>

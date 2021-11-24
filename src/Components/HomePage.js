@@ -7887,7 +7887,18 @@ const HomePage = () => {
         const basket = (JSON.parse(localStorage.getItem("sepetim")))
         const index = basket.findIndex(p => p === id)
         basket.splice(index, 1)
-        localStorage.setItem("favoriler", JSON.stringify(basket))
+        localStorage.setItem("sepetim", JSON.stringify(basket))
+    }
+    const FavoriesNotifyRemove = () => {
+        toast.success("Favorilerden Kaldırıldı", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
     return (
         <div className="HomePage">
@@ -7921,6 +7932,7 @@ const HomePage = () => {
                                         id={product.id}
                                         basketNotifySucces={basketNotifySucces}
                                         notifySucces={notifySucces}
+                                        FavoriesNotifyRemove={FavoriesNotifyRemove}
 
                                     />
                                    

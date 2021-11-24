@@ -7828,12 +7828,10 @@ const Basket = () => {
     ]
 
     )
-    const [products, setPruducts] = useState([])
-    const [totalPrice, setTotalPrice] = useState([])
-    
+    const [products, setProducts] = useState([])
+    const  [anaToplam ,setAnaToplam] = useState(0)
+    const [araToplam,setAraToplam]= useState(0)
 
-    let anaToplam = 0;
-    let araToplam = 0;
 
     useEffect(() => {
         const sepet = (JSON.parse(localStorage.getItem("sepetim")))
@@ -7844,12 +7842,23 @@ const Basket = () => {
             const product = productList.find(x => x.id === item);
             geciciÜrünler.push(product)
         });
-        console.log(geciciÜrünler)
-        setPruducts(geciciÜrünler)
-        setTotalPrice(geciciÜrünler.map(item => item.priceTag))
-        
-
+        // console.log(geciciÜrünler)
+        setProducts(geciciÜrünler)
+        calculateBasket(geciciÜrünler)
     }, []);
+
+    const calculateBasket = (products) => {
+        console.log(products)
+        let geciciAnaToplam = 0;
+        let geciciAraToplam =0;
+        products.forEach(item => {
+            geciciAnaToplam = geciciAnaToplam + item.priceTag.price
+            geciciAraToplam = geciciAraToplam + item.priceTag.discountedPrice
+        })
+        setAnaToplam(geciciAnaToplam)
+        console.log("gecici ana toplam",geciciAnaToplam)
+        setAraToplam(geciciAraToplam)
+    }
 
     const removeInBasket = (id) => {
         console.log(id)
@@ -7857,7 +7866,7 @@ const Basket = () => {
         const index = basket.findIndex(p => p === id)
         basket.splice(index, 1)
         localStorage.setItem("sepetim", JSON.stringify(basket))
-
+        
         basket = (JSON.parse(localStorage.getItem("sepetim")))
         console.log(basket)
         const basketProducts = []
@@ -7866,8 +7875,8 @@ const Basket = () => {
             basketProducts.push(product)
         });
         console.log(basketProducts)
-        setPruducts(basketProducts)
-
+        setProducts(basketProducts)
+        calculateBasket(basketProducts)
 
     }
     const addToFavories = (id) => {
@@ -7900,6 +7909,24 @@ const Basket = () => {
             progress: undefined,
         });
     }
+    const removeInFavories = (id) => {
+        console.log(id)
+        const favories = (JSON.parse(localStorage.getItem("favoriler")))
+        const index = favories.findIndex(p => p === id)
+        favories.splice(index, 1)
+        localStorage.setItem("favoriler", JSON.stringify(favories))
+    }
+    const FavoriesNotifyRemove = () => {
+        toast.success("Favorilerden Kaldırıldı", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
     return (
         <div className="Basket ">
 
@@ -7914,7 +7941,7 @@ const Basket = () => {
 
                         products.map((product) => {
                             return (
-
+                                  <div key={product.id}>
                                 <XCard
                                     image={product.images}
                                     price={product.priceTag.discountedPriceLabel}
@@ -7924,26 +7951,18 @@ const Basket = () => {
                                     removeInBasket={(id) => removeInBasket(id)}
                                     BasketNotifyRemove={BasketNotifyRemove}
                                     notifySucces={notifySucces}
+                                    FavoriesNotifyRemove={FavoriesNotifyRemove}
                                     addToFavories={(id) => addToFavories(id)}
+                                    removeInFavories={(id) => removeInFavories(id)}
                                     id={product.id}
 
                                 />
+                                </div>
 
                             )
                         })
                     }
                 </div>
-
-                {
-                    totalPrice.forEach(item => {
-                        console.log(item.price)
-                        anaToplam = item.price + anaToplam;
-                        console.log("anatoplam",anaToplam)
-                        araToplam = item.discountedPrice + araToplam;
-                        console.log("aratoplam",araToplam)
-                    })
-                }
-                
 
                 <div className="sepet">
                     <div><h1>Sepet Toplamı</h1></div>
@@ -7951,8 +7970,8 @@ const Basket = () => {
                     <div><p><big>Unishop Ayrıcalığı:<strike>{((anaToplam - araToplam) / 100)}₺</strike></big></p></div>
                     <div><p><big>Ara Toplam:{(araToplam / 100)} ₺</big></p></div>
                     <div><p><big>Teslimat Ücreti: 10.0₺</big></p></div>
-                    <div><h2>Toplam :<big> {(araToplam / 100) + 10.0 }₺</big></h2></div> <br />
-                    <div><button class="ui inverted button">Siparisi Onayla</button></div>
+                    <div><h2>Toplam :<big> {((araToplam / 100) + 10.0).toFixed(2) }₺</big></h2></div> <br />
+                    <div><button className="ui inverted button">Siparisi Onayla</button></div>
 
                 </div>
 
